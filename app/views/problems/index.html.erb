@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Title</th>
       <th>Content</th>
       <th colspan="3"></th>
@@ -12,6 +13,7 @@
   <tbody>
     <% @problems.each do |problem| %>
       <tr>
+        <td><%= problem.id %></td>
         <td><%= problem.title %></td>
         <td><%= problem.content %></td>
         <td><%= link_to 'Show', problem %></td>

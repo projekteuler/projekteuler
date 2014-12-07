@@ -1,12 +1,10 @@
 <h1>Listing problems</h1>
 
-<table>
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>ID</th>
       <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -14,11 +12,7 @@
     <% @problems.each do |problem| %>
       <tr>
         <td><%= problem.id %></td>
-        <td><%= problem.title %></td>
-        <td><%= problem.content %></td>
-        <td><%= link_to 'Show', problem %></td>
-        <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
-        <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to problem.title, problem %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +20,4 @@
 
 <br>
 
-<%= link_to 'New Problem', new_problem_path %>
+<%= button_to 'New Problem', new_problem_path, class: 'btn btn-default' %>

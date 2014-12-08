@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Projekteuler</title>
+  <title>Projekt Euler</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<%= nav_bar :brand => 'Projekt Euler', :brand_link => root_path do %>
+    <%= menu_group do %>
+        <%= menu_item 'Probleme', problems_path %>
+    <% end %>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" role="main">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

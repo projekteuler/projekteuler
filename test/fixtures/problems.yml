@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  content: MyText
+  title: First title
+  content: The content of the problem
 
 two:
-  title: MyString
-  content: MyText
+  title: Second title
+  content: The content of the second problem

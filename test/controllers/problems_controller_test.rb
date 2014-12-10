@@ -3,6 +3,10 @@ require 'test_helper'
 class ProblemsControllerTest < ActionController::TestCase
   setup do
     @problem = problems(:one)
+    @update = {
+        title: 'New title',
+        content: 'This is the new content'
+    }
   end
 
   test "should get index" do
@@ -18,7 +22,7 @@ class ProblemsControllerTest < ActionController::TestCase
 
   test "should create problem" do
     assert_difference('Problem.count') do
-      post :create, problem: { content: @problem.content, title: @problem.title }
+      post :create, problem: @update
     end
 
     assert_redirected_to problem_path(assigns(:problem))
@@ -35,7 +39,7 @@ class ProblemsControllerTest < ActionController::TestCase
   end
 
   test "should update problem" do
-    patch :update, id: @problem, problem: { content: @problem.content, title: @problem.title }
+    patch :update, id: @problem, problem: @update
     assert_redirected_to problem_path(assigns(:problem))
   end
 

@@ -7,9 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= nav_bar :brand => 'Projekt Euler', :brand_link => root_path do %>
-    <%= menu_group do %>
-        <%= menu_item 'Probleme', problems_path %>
+<%= navbar position: :static do %>
+    <%= vertical do %>
+        <%= link_to 'Projekt Euler', root_path %>
+    <% end %>
+    <%= horizontal do %>
+        <%= nav class: 'navbar-left' do %>
+            <%= link_to 'Probleme', problems_path %>
+        <% end %>
     <% end %>
 <% end %>
 <div class="container">

@@ -6,10 +6,10 @@
   <h1><%= @problem.title %> <small>Problem <%= @problem.id %></small></h1>
 </div>
 
-<div class="panel panel-default">
-  <div class="panel-body problem-content">
-    <%= sanitize @problem.content %>
-  </div>
-</div>
+<%= panel do %>
+    <div class="panel-body problem-content">
+        <%= sanitize @problem.content %>
+    </div>
+<% end %>
 
 <%= link_to 'Edit', edit_problem_path(@problem), class: 'btn btn-default' %>

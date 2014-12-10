@@ -26,4 +26,9 @@ class ProblemTest < ActiveSupport::TestCase
     )
     assert problem.save
   end
+
+  test "should have correct original url" do
+    first = Problem.first
+    assert_equal "https://projecteuler.net/problem=#{first.id}", first.original_url
+  end
 end

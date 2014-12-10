@@ -11,5 +11,7 @@
         <%= sanitize @problem.content %>
     </div>
 <% end %>
-
+<div class="text-center">
+  <%= link_to 'Dieses Problem auf projecteuler.net', @problem.original_url, target: '_blank' %>
+</div>
 <%= link_to 'Edit', edit_problem_path(@problem), class: 'btn btn-default' %>

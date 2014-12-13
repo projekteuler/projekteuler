@@ -1,0 +1,17 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<div class="page-header">
+  <h1><%= @translation.title %> <small>Problem <%= @translation.id %></small></h1>
+</div>
+
+<%= panel do %>
+    <div class="panel-body problem-content">
+        <%= sanitize @translation.content %>
+    </div>
+<% end %>
+<div class="text-center">
+  <%= link_to 'Dieses Problem auf projecteuler.net', @translation.original_url, target: '_blank' %>
+</div>
+<%= link_to 'Edit', edit_translation_path(@translation), class: 'btn btn-default' %>

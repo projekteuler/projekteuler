@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 for i in 1..103 do
-  Problem.create(
+  Translation.create(
              title: "Problem Nummer #{i}",
              content: "Das hier ist der Inhalt von <b>Problem #{i}</b>.<br />Hier ist die zweite Zeile."
   )

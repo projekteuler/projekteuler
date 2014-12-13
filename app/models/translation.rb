@@ -1,4 +1,4 @@
-class Problem < ActiveRecord::Base
+class Translation < ActiveRecord::Base
   validates :title, :content, presence: true
   validates :title, uniqueness: true
 

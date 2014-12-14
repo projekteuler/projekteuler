@@ -1,4 +1,6 @@
 class Translation < ActiveRecord::Base
+  belongs_to :problem, inverse_of: :translations
+
   validates :title, :content, presence: true
   validates :title, uniqueness: true
 

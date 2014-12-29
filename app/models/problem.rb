@@ -10,4 +10,8 @@ class Problem < ActiveRecord::Base
     !!self.translation
   end
 
+
+  def original_url
+    "https://projecteuler.net/problem=#{self.id}"
+  end
 end

@@ -27,9 +27,4 @@ class TranslationTest < ActiveSupport::TestCase
     )
     assert translation.save
   end
-
-  test "should have correct original url" do
-    first = Translation.first
-    assert_equal "https://projecteuler.net/problem=#{first.id}", first.original_url
-  end
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :problems, only: [:index, :show]
   resources :translations
 
   # The priority is based upon order of creation: first created -> highest priority.

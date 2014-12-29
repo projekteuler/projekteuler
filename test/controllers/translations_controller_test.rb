@@ -5,7 +5,8 @@ class TranslationsControllerTest < ActionController::TestCase
     @translation = translations(:one)
     @update = {
         title: 'New title',
-        content: 'This is the new content'
+        content: 'This is the new content',
+        problem_id: Problem.first
     }
   end
 

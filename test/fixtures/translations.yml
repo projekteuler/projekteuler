@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  problem: one
   title: First title
   content: The content of the translation
 
 two:
+  problem: two
   title: Second title
   content: The content of the second translation

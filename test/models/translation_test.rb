@@ -22,7 +22,8 @@ class TranslationTest < ActiveSupport::TestCase
   test "should save correct translation" do
     translation = Translation.new(
         title: 'A unique title',
-        content: 'Some content'
+        content: 'Some content',
+        problem: Problem.first
     )
     assert translation.save
   end

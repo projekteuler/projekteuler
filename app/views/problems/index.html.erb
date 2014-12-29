@@ -13,7 +13,14 @@
   <% @problems.each do |problem| %>
       <tr>
         <td><%= problem.id %></td>
-        <td><%= link_to problem.title, problem %></td>
+        <td>
+          <% if problem.is_translated? %>
+            <%= link_to problem.title, problem %>
+          <% else %>
+            <i>Dieses Problem wurde noch nicht übersetzt.</i>
+          <% end %>
+
+        </td>
       </tr>
   <% end %>
   </tbody>

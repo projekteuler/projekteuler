@@ -7,3 +7,7 @@ one:
 two:
   id: 2
   translation_id: <%= ActiveRecord::FixtureSet.identify(:translation_two) %>
+
+three:
+  id: 3
+

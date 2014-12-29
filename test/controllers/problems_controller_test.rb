@@ -11,4 +11,9 @@ class ProblemsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get untranslated problem" do
+    get :show, id: 3
+    assert_response :success
+  end
+
 end

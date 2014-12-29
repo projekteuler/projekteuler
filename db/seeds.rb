@@ -9,7 +9,7 @@
 Translation.delete_all
 Problem.delete_all
 
-for i in 1..103 do
+for i in 1..10 do
   translation = Translation.create(
              problem_id: i,
              title: "Problem Nummer #{i}",
@@ -17,3 +17,5 @@ for i in 1..103 do
   )
   Problem.create(id: i, translation: translation)
 end
+
+Problem.create(id: 11)

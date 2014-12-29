@@ -6,6 +6,9 @@ class ProblemsController < ApplicationController
   end
 
   def show
+    unless @problem.is_translated?
+      render action: "untranslated"
+    end
   end
 
   private

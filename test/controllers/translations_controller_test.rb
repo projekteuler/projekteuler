@@ -2,11 +2,11 @@ require 'test_helper'
 
 class TranslationsControllerTest < ActionController::TestCase
   setup do
-    @translation = translations(:one)
+    @translation = translations(:translation_one)
     @update = {
         title: 'New title',
         content: 'This is the new content',
-        problem_id: Problem.first
+        problem_id: 1
     }
   end
 

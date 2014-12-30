@@ -2,7 +2,7 @@ class ProblemsController < ApplicationController
   before_action :set_problem, only: [:show]
 
   def index
-    @problems = Problem.paginate(page: params[:page])
+    @problems = Problem.paginate(page: params[:page]).includes(:translation)
   end
 
   def show

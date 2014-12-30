@@ -5,7 +5,9 @@
 <div class="page-header">
   <h1><%= @problem.title %> <small>Problem <%= @problem.id %></small></h1>
 </div>
-
+<%= link_to new_problem_translation_path(@problem), class: 'btn btn-default btn-sm pull-right' do %>
+    <%= icon :pencil %> Übersetzung verbessern
+<% end %>
 <%= panel do %>
     <div class="panel-body problem-content">
       <%= sanitize @problem.content %>

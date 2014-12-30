@@ -17,7 +17,10 @@
           <% if problem.is_translated? %>
             <%= link_to problem.title, problem %>
           <% else %>
-            <i>Dieses Problem wurde noch nicht übersetzt.</i>
+              <i>Dieses Problem wurde noch nicht übersetzt.</i>
+              <%= link_to new_problem_translation_path(problem), class: 'btn btn-default btn-xs' do %>
+                  <%= icon :pencil %> Übersetzung vorschlagen
+              <% end %>
           <% end %>
 
         </td>

@@ -1,5 +1,6 @@
 class TranslationsController < ApplicationController
   before_action :set_translation, only: :show
+  before_action :set_problem, only: [:new, :create]
 
   # GET /translations
   # GET /translations.json
@@ -14,13 +15,13 @@ class TranslationsController < ApplicationController
 
   # GET /translations/new
   def new
-    @translation = Translation.new
+    @translation = @problem.translations.build
   end
 
   # POST /translations
   # POST /translations.json
   def create
-    @translation = Translation.new(translation_params)
+    @translation = @problem.translations.new(translation_params)
 
     respond_to do |format|
       if @translation.save
@@ -41,6 +42,10 @@ class TranslationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def translation_params
-      params.require(:translation).permit(:title, :content, :problem_id)
+      params.require(:translation).permit(:title, :content)
+    end
+
+    def set_problem
+      @problem = Problem.find(params[:problem_id])
     end
 end

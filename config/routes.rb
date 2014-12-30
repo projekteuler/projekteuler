@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :problems, only: [:index, :show]
-  resources :translations, only: [:index, :show, :new, :create]
+  resources :problems, only: [:index, :show] do
+    resources :translations, only: [:index, :new, :create]
+  end
+  resources :translations, only: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

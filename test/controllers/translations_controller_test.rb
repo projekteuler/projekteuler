@@ -6,7 +6,6 @@ class TranslationsControllerTest < ActionController::TestCase
     @update = {
         title: 'New title',
         content: 'This is the new content',
-        problem_id: 1
     }
   end
 
@@ -17,13 +16,13 @@ class TranslationsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, problem_id: 1
     assert_response :success
   end
 
   test "should create translation" do
     assert_difference('Translation.count') do
-      post :create, translation: @update
+      post :create, problem_id: 1, translation: @update
     end
 
     assert_redirected_to translation_path(assigns(:translation))

@@ -2,11 +2,11 @@
 
 one:
   id: 1
-  translation_id: <%= ActiveRecord::FixtureSet.identify(:translation_one) %>
+  translation: translation_one
 
 two:
   id: 2
-  translation_id: <%= ActiveRecord::FixtureSet.identify(:translation_two) %>
+  translation: translation_two
 
 three:
   id: 3

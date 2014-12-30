@@ -1,5 +1,6 @@
 class Problem < ActiveRecord::Base
-  has_one :translation
+  # TODO Check whether there is a better relation for this
+  belongs_to :translation
   delegate :title, :content, to: :translation
 
   has_many :translations, inverse_of: :problem

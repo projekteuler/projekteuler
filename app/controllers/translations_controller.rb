@@ -1,5 +1,5 @@
 class TranslationsController < ApplicationController
-  before_action :set_translation, only: [:show, :edit, :update, :destroy]
+  before_action :set_translation, only: :show
 
   # GET /translations
   # GET /translations.json
@@ -17,10 +17,6 @@ class TranslationsController < ApplicationController
     @translation = Translation.new
   end
 
-  # GET /translations/1/edit
-  def edit
-  end
-
   # POST /translations
   # POST /translations.json
   def create
@@ -34,30 +30,6 @@ class TranslationsController < ApplicationController
         format.html { render :new }
         format.json { render json: @translation.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /translations/1
-  # PATCH/PUT /translations/1.json
-  def update
-    respond_to do |format|
-      if @translation.update(translation_params)
-        format.html { redirect_to @translation, notice: 'Translation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @translation }
-      else
-        format.html { render :edit }
-        format.json { render json: @translation.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /translations/1
-  # DELETE /translations/1.json
-  def destroy
-    @translation.destroy
-    respond_to do |format|
-      format.html { redirect_to translations_url, notice: 'Translation was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

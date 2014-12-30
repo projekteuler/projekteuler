@@ -33,22 +33,4 @@ class TranslationsControllerTest < ActionController::TestCase
     get :show, id: @translation
     assert_response :success
   end
-
-  test "should get edit" do
-    get :edit, id: @translation
-    assert_response :success
-  end
-
-  test "should update translation" do
-    patch :update, id: @translation, translation: @update
-    assert_redirected_to translation_path(assigns(:translation))
-  end
-
-  test "should destroy translation" do
-    assert_difference('Translation.count', -1) do
-      delete :destroy, id: @translation
-    end
-
-    assert_redirected_to translations_path
-  end
 end

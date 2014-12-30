@@ -15,7 +15,7 @@ for i in 1..10 do
              title: "Problem Nummer #{i}",
              content: "Das hier ist der Inhalt von <b>Problem #{i}</b>.<br />Hier ist die zweite Zeile."
   )
-  Problem.create(id: i, translation: translation)
+  Problem.create(id: i, translation_id: translation.id)
 end
 
 Problem.create(id: 11)

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :problems, only: [:index, :show] do
-    resources :translations, only: [:index, :new, :create]
+    resources :translations, only: [:new, :create]
   end
   resources :translations, only: [:index, :show]
 

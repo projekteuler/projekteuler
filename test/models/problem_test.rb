@@ -1,34 +1,20 @@
 require 'test_helper'
 
 class ProblemTest < ActiveSupport::TestCase
-  test "should not save problem without title" do
-    problem = Problem.new(content: 'This is some content')
-    assert_not problem.save
-  end
-
-  test "should not save problem without content" do
-    problem = Problem.new(title: 'Problem title')
-    assert_not problem.save
-  end
-
-  test "should not save problem with duplicate title" do
-    problem = Problem.new(
-        title: problems(:one).title,
-        content: 'This is some content'
-    )
-    assert_not problem.save
-  end
-
   test "should save correct problem" do
-    problem = Problem.new(
-        title: 'A unique title',
-        content: 'Some content'
-    )
+    problem = Problem.new
     assert problem.save
   end
 
+  test "is_translated? should return false for missing translation" do
+    assert_not problems(:three).is_translated?
+  end
+
+  test "is_translated? should return true for existing translation" do
+    assert problems(:one).is_translated?
+  end
+
   test "should have correct original url" do
-    first = Problem.first
-    assert_equal "https://projecteuler.net/problem=#{first.id}", first.original_url
+    assert_equal "https://projecteuler.net/problem=1", problems(:one).original_url
   end
 end

@@ -1,0 +1,22 @@
+<h1>Listing translations</h1>
+
+<%= render 'translation_pagination' %>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @translations.each do |translation| %>
+      <tr>
+        <td><%= translation.id %></td>
+        <td><%= link_to translation.title, translation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= render 'translation_pagination' %>
+<br>

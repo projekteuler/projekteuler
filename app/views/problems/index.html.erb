@@ -1,24 +1,32 @@
-<h1>Listing problems</h1>
+<h1>Listing Problems</h1>
 
 <%= render 'problem_pagination' %>
 <table class="table table-striped table-bordered">
   <thead>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-    </tr>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @problems.each do |problem| %>
+  <% @problems.each do |problem| %>
       <tr>
         <td><%= problem.id %></td>
-        <td><%= link_to problem.title, problem %></td>
+        <td>
+          <% if problem.is_translated? %>
+            <%= link_to problem.title, problem %>
+          <% else %>
+              <i>Dieses Problem wurde noch nicht übersetzt.</i>
+              <%= link_to new_problem_translation_path(problem), class: 'btn btn-default btn-xs' do %>
+                  <%= icon :pencil %> Übersetzung vorschlagen
+              <% end %>
+          <% end %>
+
+        </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 <%= render 'problem_pagination' %>
 <br>
-
-<%= link_to 'New Problem', new_problem_path, class: 'btn btn-default' %>

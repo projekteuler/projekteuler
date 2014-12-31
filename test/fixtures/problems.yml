@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: First title
-  content: The content of the problem
+  id: 1
+  translation: translation_one
 
 two:
-  title: Second title
-  content: The content of the second problem
+  id: 2
+  translation: translation_two
+
+three:
+  id: 3
+

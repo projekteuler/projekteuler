@@ -3,7 +3,9 @@
 de:
   activerecord:
     models:
-      translation: 'Übersetzung'
+      translation:
+       one: 'Übersetzung'
+       other: 'Übersetzungen'
     attributes:
       translation:
         id: 'ID'

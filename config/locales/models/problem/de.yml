@@ -3,7 +3,9 @@
 de:
   activerecord:
     models:
-      problem: 'Problem'
+      problem:
+        one: 'Problem'
+        other: 'Probleme'
     attributes:
       problem:
         id: 'ID'

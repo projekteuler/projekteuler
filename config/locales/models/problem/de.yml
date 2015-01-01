@@ -1,0 +1,12 @@
+# ruby encoding: utf-8
+
+de:
+  activerecord:
+    models:
+      problem: 'Problem'
+    attributes:
+      problem:
+        id: 'ID'
+        translation_id: 'Übersetzungs-ID'
+        title: 'Titel'
+        content: 'Inhalt'

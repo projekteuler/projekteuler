@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Projekt Euler</title>
+  <title><%= t :site_title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,12 +9,12 @@
 <body>
 <%= navbar position: :static do %>
     <%= vertical do %>
-        <%= link_to 'Projekt Euler', root_path %>
+        <%= link_to t(:site_title), root_path %>
     <% end %>
     <%= horizontal do %>
         <%= nav class: 'navbar-left' do %>
-            <%= link_to 'Problems', problems_path %>
-            <%= link_to 'Translations', translations_path %>
+            <%= link_to Problem.model_name.human(count: 2), problems_path %>
+            <%= link_to Translation.model_name.human(count: 2), translations_path %>
         <% end %>
     <% end %>
 <% end %>

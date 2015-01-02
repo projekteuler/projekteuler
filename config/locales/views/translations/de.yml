@@ -1,0 +1,7 @@
+# ruby encoding: utf-8
+
+de:
+  translations:
+    new:
+      back: Zurück
+      new_translation: Neue Übersetzung für Problem %{id}

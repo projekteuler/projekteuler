@@ -1,7 +1,7 @@
 <%= form_for([@problem, @translation]) do |f| %>
   <% if @translation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@translation.errors.count, "error") %> prohibited this problem from being saved:</h2>
+      <h2><%= t 'errors.template.header', model: Translation.model_name.human, count: @translation.errors.count %></h2>
 
       <ul>
       <% @translation.errors.full_messages.each do |message| %>

@@ -5,3 +5,5 @@ de:
     new:
       back: Zurück
       new_translation: Neue Übersetzung für Problem %{id}
+    notice:
+      successfully_created: Übersetzung wurde erfolgreich erstellt.

@@ -3,10 +3,10 @@
 <% end %>
 
 <div class="page-header">
-  <h1><%= @problem.title %> <small>Problem <%= @problem.id %></small></h1>
+  <h1><%= @problem.title %> <small><%= t '.problem_subtitle', id: @problem.id %></small></h1>
 </div>
 <%= link_to new_problem_translation_path(@problem), class: 'btn btn-default btn-sm pull-right' do %>
-    <%= icon :pencil %> Übersetzung verbessern
+    <%= icon :pencil %> <%= t '.improve_translation' %>
 <% end %>
 <%= panel do %>
     <div class="panel-body problem-content">
@@ -14,5 +14,5 @@
     </div>
 <% end %>
 <div class="text-center">
-  <%= link_to 'Dieses Problem auf projecteuler.net', @problem.original_url, target: '_blank' %>
+  <%= link_to t('.view_original_problem'), @problem.original_url, target: '_blank' %>
 </div>

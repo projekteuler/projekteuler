@@ -1,11 +1,11 @@
-<h1>Listing Problems</h1>
+<h1><%= Problem.model_name.human(count: 2) %></h1>
 
 <%= render 'problem_pagination' %>
 <table class="table table-striped table-bordered">
   <thead>
   <tr>
-    <th>ID</th>
-    <th>Title</th>
+    <th><%= Problem.human_attribute_name(:id) %></th>
+    <th><%= Problem.human_attribute_name(:title) %></th>
   </tr>
   </thead>
 
@@ -17,9 +17,9 @@
           <% if problem.is_translated? %>
             <%= link_to problem.title, problem %>
           <% else %>
-              <i>Dieses Problem wurde noch nicht übersetzt.</i>
+              <i><%= t '.not_yet_translated' %></i>
               <%= link_to new_problem_translation_path(problem), class: 'btn btn-default btn-xs' do %>
-                  <%= icon :pencil %> Übersetzung vorschlagen
+                  <%= icon :pencil %> <%= t '.suggest_translation' %>
               <% end %>
           <% end %>
 

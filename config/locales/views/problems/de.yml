@@ -1,0 +1,7 @@
+# ruby encoding: utf-8
+
+de:
+  problems:
+    index:
+      not_yet_translated: 'Dieses Problem wurde noch nicht übersetzt.'
+      suggest_translation: 'Übersetzung vorschlagen'

@@ -2,8 +2,8 @@
 
 de:
   problems:
+    not_yet_translated: 'Dieses Problem wurde noch nicht übersetzt.'
     index:
-      not_yet_translated: 'Dieses Problem wurde noch nicht übersetzt.'
       suggest_translation: 'Übersetzung vorschlagen'
     show:
       improve_translation: 'Übersetzung verbessern'

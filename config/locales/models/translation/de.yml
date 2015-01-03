@@ -4,11 +4,11 @@ de:
   activerecord:
     models:
       translation:
-       one: 'Übersetzung'
-       other: 'Übersetzungen'
+       one: Übersetzung
+       other: Übersetzungen
     attributes:
       translation:
-        id: 'ID'
-        problem_id: 'Problem-ID'
-        title: 'Titel'
-        content: 'Inhalt'
+        id: ID
+        problem_id: Problem-ID
+        title: Titel
+        content: Inhalt

@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'web-console', '~> 2.0', group: :development
 
 # Use Coveralls for coverage documentation
-gem 'coveralls', require: false
+gem 'coveralls', '~> 0.7.2', require: false
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'

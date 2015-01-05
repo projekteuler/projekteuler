@@ -4,7 +4,7 @@ class CreateProblems < ActiveRecord::Migration
       t.string :title
       t.text :content
 
-      t.timestamps
+      t.timestamps null: true
     end
   end
 end

@@ -11,9 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214221259) do
+ActiveRecord::Schema.define(version: 20150131103802) do
 
-  create_table "problems", force: true do |t|
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "problems", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "translation_id"
@@ -21,8 +39,8 @@ ActiveRecord::Schema.define(version: 20141214221259) do
 
   add_index "problems", ["translation_id"], name: "index_problems_on_translation_id"
 
-  create_table "translations", force: true do |t|
-    t.string   "title"
+  create_table "translations", force: :cascade do |t|
+    t.string   "title",      limit: 255
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"

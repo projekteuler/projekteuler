@@ -75,6 +75,7 @@ de:
       signed_out: "Erfolgreich abgemeldet."
       new:
         sign_in: Anmelden
+        no_sign_in_required_for_translating: "Für das Vorschlagen von Übersetzungen ist keine Anmeldung notwendig. Die Anmeldung dient lediglich der Verwaltung durch Admins:"
     shared:
       links:
         didn_t_receive_confirmation_instructions: Keine Anleitung zur Bestätigung erhalten?

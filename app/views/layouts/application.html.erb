@@ -28,9 +28,17 @@
             <%= link_to Problem.model_name.human(count: 2), problems_path %>
             <%= link_to Translation.model_name.human(count: 2), translations_path %>
         <% end %>
+        <%= nav class: 'navbar-right' do %>
+      <% if admin_signed_in? %>
+        <%= link_to(t('application.sign_out'), destroy_admin_session_path, method: :delete) %>
+      <% else %>
+        <%= link_to(t('application.sign_in'), new_admin_session_path) %>
+      <% end %>
+        <% end %>
     <% end %>
 <% end %>
 <div class="container">
+  <%= flash_messages %>
   <div class="row">
     <div class="col-md-12" role="main">
       <%= yield %>

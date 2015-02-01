@@ -1,4 +1,5 @@
 class ProblemsController < ApplicationController
+  skip_before_action :authenticate_admin!, only: [:index, :show]
   before_action :set_problem, only: [:show]
 
   def index

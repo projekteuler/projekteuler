@@ -1,4 +1,5 @@
 class TranslationsController < ApplicationController
+  skip_before_action :authenticate_admin!, only: [:new, :create]
   before_action :set_translation, only: :show
   before_action :set_problem, only: [:new, :create]
 

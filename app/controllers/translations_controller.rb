@@ -26,7 +26,7 @@ class TranslationsController < ApplicationController
 
     respond_to do |format|
       if @translation.save
-        format.html { redirect_to @translation.problem, notice: t('translations.notice.successfully_created') }
+        format.html { redirect_to @problem, notice: t('translations.notice.successfully_created') }
         format.json { render :show, status: :created, location: @translation }
       else
         format.html { render :new }

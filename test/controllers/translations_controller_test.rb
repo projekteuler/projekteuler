@@ -25,7 +25,7 @@ class TranslationsControllerTest < ActionController::TestCase
       post :create, problem_id: 1, translation: @update
     end
 
-    assert_redirected_to translation_path(assigns(:translation))
+    assert_redirected_to problem_path(id: 1)
   end
 
   test "should show translation" do

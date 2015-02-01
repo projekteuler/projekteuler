@@ -1,4 +1,5 @@
 class TranslationsController < ApplicationController
+  skip_before_action :authenticate_admin!, only: [:new, :create]
   before_action :set_translation, only: :show
   before_action :set_problem, only: [:new, :create]
 
@@ -25,7 +26,7 @@ class TranslationsController < ApplicationController
 
     respond_to do |format|
       if @translation.save
-        format.html { redirect_to @translation, notice: t('translations.notice.successfully_created') }
+        format.html { redirect_to @translation.problem, notice: t('translations.notice.successfully_created') }
         format.json { render :show, status: :created, location: @translation }
       else
         format.html { render :new }

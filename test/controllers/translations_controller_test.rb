@@ -1,15 +1,19 @@
 require 'test_helper'
 
 class TranslationsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @translation = translations(:translation_one)
     @update = {
         title: 'New title',
         content: 'This is the new content',
     }
+    @admin = admins(:admin)
   end
 
   test "should get index" do
+    sign_in @admin
     get :index
     assert_response :success
     assert_not_nil assigns(:translations)
@@ -25,10 +29,11 @@ class TranslationsControllerTest < ActionController::TestCase
       post :create, problem_id: 1, translation: @update
     end
 
-    assert_redirected_to translation_path(assigns(:translation))
+    assert_redirected_to problem_path(id: 1)
   end
 
   test "should show translation" do
+    sign_in @admin
     get :show, id: @translation
     assert_response :success
   end

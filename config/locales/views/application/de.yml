@@ -1,0 +1,6 @@
+# ruby encoding: utf-8
+
+de:
+  application:
+    sign_in: 'Einloggen'
+    sign_out: 'Ausloggen'

@@ -8,6 +8,7 @@
 
 Translation.delete_all
 Problem.delete_all
+Admin.delete_all
 
 for i in 1..10 do
   translation = Translation.create(
@@ -19,3 +20,9 @@ for i in 1..10 do
 end
 
 Problem.create(id: 11)
+
+Admin.create(
+         email: 'admin@example.com',
+         password: 'password',
+         password_confirmation: 'password'
+)

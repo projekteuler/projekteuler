@@ -17,6 +17,10 @@ class TranslationsController < ApplicationController
   # GET /translations/new
   def new
     @translation = @problem.translations.build
+    if @problem.is_translated?
+      @translation.title = @problem.translation.title
+      @translation.content = @problem.translation.content
+    end
   end
 
   # POST /translations

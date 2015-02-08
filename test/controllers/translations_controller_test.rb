@@ -23,8 +23,13 @@ class TranslationsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:translations)
   end
 
-  test "should get new" do
+  test "should get new for translated problem" do
     get :new, problem_id: 1
+    assert_response :success
+  end
+
+  test "should get new for untranslated problem" do
+    get :new, problem_id: 3
     assert_response :success
   end
 

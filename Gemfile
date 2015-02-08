@@ -8,7 +8,7 @@ gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.1'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '~> 2.7.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -31,7 +31,7 @@ gem 'coveralls', '~> 0.7.2', require: false
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 
-gem 'bh', '~> 1.2'
+gem 'bh', '~> 1.3.1'
 
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'

@@ -17,9 +17,4 @@ class ProblemsController < ApplicationController
   def set_problem
     @problem = Problem.find(params[:id])
   end
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def problem_params
-    params.require(:problem)
-  end
 end

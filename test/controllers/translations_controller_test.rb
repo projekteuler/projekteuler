@@ -9,6 +9,10 @@ class TranslationsControllerTest < ActionController::TestCase
         title: 'New title',
         content: 'This is the new content',
     }
+    @incorrect = {
+        title: '',
+        content: ''
+    }
     @admin = admins(:admin)
   end
 
@@ -30,6 +34,12 @@ class TranslationsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to problem_path(id: 1)
+  end
+
+  test "should not create incorrect translation" do
+    assert_no_difference('Translation.count') do
+      post :create, problem_id: 1, translation: @incorrect
+    end
   end
 
   test "should show translation" do

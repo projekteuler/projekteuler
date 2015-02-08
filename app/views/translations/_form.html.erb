@@ -1,5 +1,17 @@
 <%= form_for [@problem, @translation], layout: :basic do |f| %>
-    <%= f.text_field :title %>
-    <%= f.text_area :content %>
-    <%= f.submit %>
+  <%= f.text_field :title %>
+  <%= nav id: 'translationNav' do %>
+    <%= link_to t('.source_code'), '#source', data: {toggle: 'tab'} %>
+    <%= link_to t('.preview'), '#preview', data: {toggle: 'tab'} %>
+  <% end %>
+  <div class="tab-content">
+    <div class="tab-pane active" id="source">
+      <%= f.text_area :content, placeholder: t('.translation_source_explanation') %>
+    </div>
+    <%= panel class: 'tab-pane', id: 'preview' do %>
+      <div class="panel-body problem-content">
+      </div>
+    <% end %>
+  </div>
+  <%= f.submit %>
 <% end %>

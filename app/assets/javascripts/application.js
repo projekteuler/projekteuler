@@ -14,4 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require codemirror
+//= require codemirror/addons/display/placeholder
+//= require codemirror/modes/xml
+//= require codemirror/modes/css
+//= require codemirror/modes/javascript
+//= require codemirror/modes/htmlmixed
+//= require translations
 //= require_tree .

@@ -7,7 +7,7 @@ class Translation < ActiveRecord::Base
   self.per_page = 50
 
   def title_is_unique_among_other_problems
-    Problem.where.not(id: problem_id).each do |problem|
+    Problem.includes(:translation).where.not(id: problem_id).each do |problem|
       if problem.is_translated? and problem.title == title
         errors.add(:title, :taken)
         break

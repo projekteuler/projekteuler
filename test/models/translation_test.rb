@@ -20,6 +20,15 @@ class TranslationTest < ActiveSupport::TestCase
     assert_not translation.save
   end
 
+  test "should save translation with duplicate title of translation for same problem" do
+    translation = Translation.new(
+        title: translations(:translation_one).title,
+        content: 'This is some content',
+        problem_id: 1
+    )
+    assert translation.save
+  end
+
   test "should save correct translation" do
     translation = Translation.new(
         title: 'A unique title',

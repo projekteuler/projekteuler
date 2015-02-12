@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'web-console', '~> 2.0', group: :development
 
+
+gem 'quiet_assets', group: :development
+
 # Use Coveralls for coverage documentation
 gem 'coveralls', '~> 0.7.2', require: false
 

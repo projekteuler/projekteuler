@@ -1,18 +1,5 @@
 class TranslationsController < ApplicationController
-  skip_before_action :authenticate_admin!, only: [:new, :create]
-  before_action :set_translation, only: :show
   before_action :set_problem, only: [:new, :create]
-
-  # GET /translations
-  # GET /translations.json
-  def index
-    @translations = Translation.paginate(page: params[:page])
-  end
-
-  # GET /translations/1
-  # GET /translations/1.json
-  def show
-  end
 
   # GET /translations/new
   def new
@@ -40,11 +27,6 @@ class TranslationsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_translation
-      @translation = Translation.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def translation_params
       params.require(:translation).permit(:title, :content)

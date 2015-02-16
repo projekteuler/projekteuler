@@ -27,7 +27,7 @@
         <%= nav class: 'navbar-left' do %>
             <%= link_to Problem.model_name.human(count: 2), problems_path %>
             <% if admin_signed_in? %>
-              <%= link_to Translation.model_name.human(count: 2), translations_path %>
+              <%= link_to t('admin.dashboard.index.administration'), :admin %>
             <% end %>
         <% end %>
         <%= nav class: 'navbar-right' do %>

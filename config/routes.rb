@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resources :problems, only: [:index, :show] do
     resources :translations, only: [:new, :create]
   end
-  resources :translations, only: [:index, :show]
+
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+    resources :translations, only: [:index, :show]
+  end
 
   mathjax 'mathjax'
 

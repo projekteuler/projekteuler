@@ -4,7 +4,6 @@ class TranslationsControllerTest < ActionController::TestCase
   include Devise::TestHelpers
 
   setup do
-    @translation = translations(:translation_one)
     @update = {
         title: 'New title',
         content: 'This is the new content',
@@ -13,14 +12,6 @@ class TranslationsControllerTest < ActionController::TestCase
         title: '',
         content: ''
     }
-    @admin = admins(:admin)
-  end
-
-  test "should get index" do
-    sign_in @admin
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:translations)
   end
 
   test "should get new for translated problem" do
@@ -45,11 +36,5 @@ class TranslationsControllerTest < ActionController::TestCase
     assert_no_difference('Translation.count') do
       post :create, problem_id: 1, translation: @incorrect
     end
-  end
-
-  test "should show translation" do
-    sign_in @admin
-    get :show, id: @translation
-    assert_response :success
   end
 end

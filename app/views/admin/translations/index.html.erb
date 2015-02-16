@@ -13,7 +13,7 @@
     <% @translations.each do |translation| %>
       <tr>
         <td><%= translation.id %></td>
-        <td><%= link_to translation.title, translation %></td>
+        <td><%= link_to translation.title, [:admin, translation] %></td>
       </tr>
     <% end %>
   </tbody>

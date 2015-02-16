@@ -7,7 +7,6 @@ de:
       source_code: Quelltext
       translation_source_explanation: Hier kommt der HTML-Quelltext der Übersetzung hin.
     new:
-      back: Zurück
       new_translation: Neue Übersetzung für Problem %{id}
     notice:
       successfully_created: Übersetzung wurde erfolgreich erstellt.

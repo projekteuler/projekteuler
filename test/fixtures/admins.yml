@@ -7,4 +7,4 @@
 
 admin:
   email: admin@example.com
-  encrypted_password: <%= Devise.bcrypt(Admin, 'password') %>
+  encrypted_password: <%= Devise::Encryptor.digest(Admin, 'password') %>

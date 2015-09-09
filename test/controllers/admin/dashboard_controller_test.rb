@@ -18,4 +18,10 @@ class Admin::DashboardControllerTest < ActionController::TestCase
     assert_equal 15, Problem.count
   end
 
+  test "should fail incorrect problem count" do
+    post :update_problem_count, problem_count: 2
+    assert_redirected_to controller: 'admin/dashboard', action: 'index'
+    assert_equal 3, Problem.count
+  end
+
 end

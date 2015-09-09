@@ -15,4 +15,13 @@ class Problem < ActiveRecord::Base
   def original_url
     "https://projecteuler.net/problem=#{self.id}"
   end
+
+  def self.update_count(new_count)
+    old_count = Problem.count
+    raise ArgumentError, "new count has to be larger than old count" if new_count < old_count
+
+    new_count.times do |i|
+      Problem.where(id: i + 1).first_or_create!
+    end
+  end
 end

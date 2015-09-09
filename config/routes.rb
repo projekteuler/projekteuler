@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '', to: 'dashboard#index', as: '/'
+    post '/update_problem_count', to: 'dashboard#update_problem_count'
     resources :translations, only: [:index, :show]
   end
 

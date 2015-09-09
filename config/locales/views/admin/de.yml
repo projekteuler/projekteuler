@@ -4,3 +4,9 @@ de:
       index:
         administration: "Administration"
         view_translations: "Übersetzungen anschauen"
+        update_problem_count: "Problem-Anzahl aktualisieren"
+        update: "Aktualisieren"
+      update_problem_count:
+        success_message: "Problem-Anzahl wurde erfolgreich aktualisiert!"
+        failure_message: "Problem-Anzahl konnte nicht aktualisiert werden! Grund: %{error}"
+        no_problem_count: "Keine Problem-Anzahl gegeben!"

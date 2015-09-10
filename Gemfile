@@ -37,6 +37,7 @@ gem 'autoprefixer-rails'
 gem 'bh', '~> 1.3.4'
 
 gem 'will_paginate', '~> 3.0.7'
+gem 'will-paginate-i18n'
 gem 'will_paginate-bootstrap'
 
 gem 'mathjax-rails'

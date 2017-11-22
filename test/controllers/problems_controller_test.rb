@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ProblemsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   test "should get index" do
     get :index

@@ -1,4 +1,4 @@
-class Translation < ActiveRecord::Base
+class Translation < ApplicationRecord
   belongs_to :problem, inverse_of: :translations
 
   validates :title, :content, :problem_id, presence: true

@@ -14,7 +14,7 @@ class Admin::TranslationsControllerTest < ActionController::TestCase
   end
 
   test "should show translation" do
-    get :show, id: @translation
+    get :show, params: { id: @translation }
     assert_response :success
   end
 

@@ -13,8 +13,8 @@ loadCodeMirror = ->
       mode: "text/html"
     })
 
-$(document).ready loadCodeMirror
-$(document).on "page:load", loadCodeMirror
+$(document).on "turbolinks:load", loadCodeMirror
+
 
 $(document).on "click", '#translationNav a[href="#preview"]', ->
   $('#preview .problem-content').html(cm.getValue())

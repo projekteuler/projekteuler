@@ -1,1 +1,10 @@
+<% provide(:title, t('problems.show.problem_subtitle', id: @problem.id)) %>
+
+<div class="page-header">
+  <h1><%= t 'problems.show.problem_subtitle', id: @problem.id %></h1>
+</div>
+
 <%= t 'problems.not_yet_translated' %>
+<%= link_to new_problem_translation_path(@problem), class: 'btn btn-default btn-xs' do %>
+    <%= icon :pencil %> <%= t 'problems.index.suggest_translation' %>
+<% end %>

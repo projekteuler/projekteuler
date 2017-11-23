@@ -1,3 +1,5 @@
+<% provide(:title, Translation.model_name.human(count: 2)) %>
+
 <h1><%= Translation.model_name.human(count: 2) %></h1>
 
 <%= render 'translation_pagination' %>

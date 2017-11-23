@@ -18,3 +18,7 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.turbolinks-progress-bar {
+  background-color: $brand-primary;
+}

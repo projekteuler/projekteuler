@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ProblemsControllerTest < ActionController::TestCase
-  include Devise::TestHelpers
+  include Devise::Test::ControllerHelpers
 
   test "should get index" do
     get :index
@@ -9,12 +9,12 @@ class ProblemsControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show, id: 1
+    get :show, params: { id: 1 }
     assert_response :success
   end
 
   test "should get untranslated problem" do
-    get :show, id: 3
+    get :show, params: { id: 3 }
     assert_response :success
   end
 

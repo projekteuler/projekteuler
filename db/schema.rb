@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20150131103802) do
   add_index "problems", ["translation_id"], name: "index_problems_on_translation_id"
 
   create_table "translations", force: :cascade do |t|
-    t.string   "title",      limit: 255
+    t.string   "title"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"

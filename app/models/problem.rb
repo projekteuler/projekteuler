@@ -1,6 +1,6 @@
-class Problem < ActiveRecord::Base
+class Problem < ApplicationRecord
   # TODO Check whether there is a better relation for this
-  belongs_to :translation
+  belongs_to :translation, optional: true
   delegate :title, :content, to: :translation
 
   has_many :translations, inverse_of: :problem

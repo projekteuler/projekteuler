@@ -2,50 +2,49 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '5.1.4'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.13'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0.4'
+gem 'sass-rails', '~> 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 2.7.2'
+gem 'uglifier', '~> 3.2.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.2'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+gem 'rails-controller-testing'
+
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.1'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '~> 5.0.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.3.1'
+gem 'jbuilder', '~> 2.7.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.2',          group: :doc
 
-gem 'web-console', '~> 2.0', group: :development
-
-
-gem 'quiet_assets', group: :development
+gem 'web-console', '~> 3.5.1', group: :development
 
 # Use Coveralls for coverage documentation
-gem 'coveralls', '~> 0.8.2', require: false
+gem 'coveralls', '~> 0.8.21', require: false
 
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'autoprefixer-rails', '~> 7.1.6'
 
-gem 'bh', '~> 1.3.4'
+gem 'bh', '~> 1.3.6'
 
-gem 'will_paginate', '~> 3.0.7'
-gem 'will-paginate-i18n'
-gem 'will_paginate-bootstrap'
+gem 'will_paginate', '~> 3.1.6'
+gem 'will-paginate-i18n', '~> 0.1.15'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 
-gem 'mathjax-rails'
+gem 'mathjax-rails', '~> 2.6.1'
 
-gem 'devise', '~> 3.5.2'
-gem 'devise-bootstrap-views'
+gem 'devise', '~> 4.3.0'
+gem 'devise-bootstrap-views', '~> 0.0.11'
 
-gem 'codemirror-rails'
+gem 'codemirror-rails', '~> 5.16.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

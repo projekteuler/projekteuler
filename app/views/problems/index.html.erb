@@ -1,3 +1,5 @@
+<% provide(:title, Problem.model_name.human(count: 2)) %>
+
 <h1><%= Problem.model_name.human(count: 2) %></h1>
 
 <%= render 'problem_pagination' %>

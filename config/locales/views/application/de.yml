@@ -4,3 +4,7 @@ de:
   application:
     sign_in: 'Einloggen'
     sign_out: 'Ausloggen'
+    info: "Info"
+    legal: "Impressum"
+    copyright: "Copyright-Informationen"
+    bootstrap_html: 'Entworfen mit <a href="http://getbootstrap.com/">Bootstrap</a>'

@@ -1,0 +1,22 @@
+<%= navbar position: :static do %>
+    <%= vertical do %>
+        <%= link_to t(:site_title), root_path %>
+    <% end %>
+    <%= horizontal do %>
+        <%= nav class: 'navbar-left' do %>
+            <%= link_to t('application.info'), about_info_path %>
+            <%= link_to Problem.model_name.human(count: 2), problems_path %>
+            <% if admin_signed_in? %>
+                <%= link_to t('admin.dashboard.index.administration'), :admin %>
+            <% end %>
+        <% end %>
+        <%= nav class: 'navbar-right' do %>
+            <%= link_to t('application.legal'), about_legal_path %>
+            <% if admin_signed_in? %>
+                <%= link_to(t('application.sign_out'), destroy_admin_session_path, method: :delete) %>
+            <% else %>
+                <%= link_to(t('application.sign_in'), new_admin_session_path) %>
+            <% end %>
+        <% end %>
+    <% end %>
+<% end %>

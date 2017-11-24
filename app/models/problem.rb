@@ -11,9 +11,12 @@ class Problem < ApplicationRecord
     !!self.translation
   end
 
-
   def original_url
     "https://projecteuler.net/problem=#{self.id}"
+  end
+
+  def self.translated_count
+    Problem.count(:translation_id)
   end
 
   def self.update_count(new_count)

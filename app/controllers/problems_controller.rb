@@ -3,6 +3,7 @@ class ProblemsController < ApplicationController
 
   def index
     @problems = Problem.paginate(page: params[:page]).includes(:translation)
+    @translated_percentage = 100 * Problem.translated_count / Problem.count
   end
 
   def show

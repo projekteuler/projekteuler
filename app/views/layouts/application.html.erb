@@ -20,26 +20,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= navbar position: :static do %>
-    <%= vertical do %>
-        <%= link_to t(:site_title), root_path %>
-    <% end %>
-    <%= horizontal do %>
-        <%= nav class: 'navbar-left' do %>
-            <%= link_to Problem.model_name.human(count: 2), problems_path %>
-            <% if admin_signed_in? %>
-              <%= link_to t('admin.dashboard.index.administration'), :admin %>
-            <% end %>
-        <% end %>
-        <%= nav class: 'navbar-right' do %>
-      <% if admin_signed_in? %>
-        <%= link_to(t('application.sign_out'), destroy_admin_session_path, method: :delete) %>
-      <% else %>
-        <%= link_to(t('application.sign_in'), new_admin_session_path) %>
-      <% end %>
-        <% end %>
-    <% end %>
-<% end %>
+<%= render 'layouts/header' %>
 <div class="container">
   <%= flash_messages %>
   <div class="row">
@@ -49,5 +30,6 @@
   </div>
 </div>
 
+<%= render 'layouts/footer' %>
 </body>
 </html>

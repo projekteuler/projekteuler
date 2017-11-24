@@ -18,12 +18,17 @@ class ProblemTest < ActiveSupport::TestCase
     assert_equal "https://projecteuler.net/problem=1", problems(:one).original_url
   end
 
+  test "should return correct number of translated problems" do
+    assert_equal 2, Problem.translated_count
+  end
+
   test "should allow for problem count updating" do
     Problem.update_count(10)
     assert_not Problem.where(id: 0).exists?
     (1..10).each do |i|
       assert Problem.where(id: i).exists?
     end
+    assert_not Problem.where(id: 11).exists?
     assert_equal "First title", Problem.find(1).title
   end
 
@@ -33,5 +38,6 @@ class ProblemTest < ActiveSupport::TestCase
       Problem.update_count(1)
     end
     assert_equal 3, Problem.count()
+    assert_equal "First title", Problem.find(1).title
   end
 end

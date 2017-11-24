@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>Willkommen auf Projekt Euler!</h1>
+    <p>Diese Seite ist eine Übersetzung der englischen Rätsel-Webseite <a href="https://projecteuler.net/">projecteuler.net</a>.</p>
+    <p>
+      <%= link_to about_info_path, class: 'btn btn-primary btn-lg' do %>
+          Mehr erfahren &raquo;
+      <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Ansehen</h2>
+      <p>Bisher wurden leider erst <%= Problem.translated_count %> der <%= Problem.count %> Probleme übersetzt, es gibt also noch einiges zu tun!</p>
+      <p>
+        <%= link_to problems_path, class: 'btn btn-default' do %>
+            Zu den Problemen &raquo;
+        <% end %>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h2>Erweitern</h2>
+      <p>Sie haben in Zukunft auch die Möglichkeit, eigene Übersetzungen vorzuschlagen. An diesem Feature wird aber zurzeit noch gearbeitet.</p>
+      <p><a class="btn btn-default disabled" href="#" role="button">Übersetzung vorschlagen &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>Verbessern</h2>
+      <p>Haben Sie Verbesserungsvorschläge für eine der Übersetzungen? Fehlt Ihnen eine Funktion auf der Webseite, oder ist Ihnen ein Fehler aufgefallen? Dann schreiben Sie uns!</p>
+      <p><a class="btn btn-default disabled" href="#" role="button">Zum Kontaktformular &raquo;</a></p>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ de:
     not_yet_translated: Dieses Problem wurde noch nicht übersetzt.
     index:
       suggest_translation: Übersetzung vorschlagen
+      translated_count: "Übersetzte Probleme: %{translated} von %{total}"
     show:
       improve_translation: Übersetzung verbessern
       problem_subtitle: Problem %{id}

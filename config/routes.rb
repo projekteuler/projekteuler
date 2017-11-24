@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'about/index'
+  get 'about/info'
+  get 'about/copyright'
+  get 'about/legal'
+  get 'about/roman_numerals'
+
   devise_for :admins, skip: :registrations
   resources :problems, only: [:index, :show] do
     resources :translations, only: [:new, :create]
@@ -16,7 +22,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'problems#index'
+  root 'about#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

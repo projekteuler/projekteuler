@@ -26,4 +26,9 @@ class AboutControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should redirect about pages" do
+    get '/about=roman_numerals'
+    assert_redirected_to about_roman_numerals_url
+  end
+
 end

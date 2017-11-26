@@ -3,16 +3,21 @@ Rails.application.routes.draw do
   get 'about/info'
   get 'about/copyright'
   get 'about/legal'
+
   get 'about/roman_numerals'
 
-  devise_for :admins, skip: :registrations
+  get 'about=:page', to: redirect('/about/%{page}')
+
+  get 'problem=:id', to: redirect('/problems/%{id}')
+
   resources :problems, only: [:index, :show] do
     resources :translations, only: [:new, :create]
   end
 
+  devise_for :admins, skip: :registrations
   namespace :admin do
-    get '', to: 'dashboard#index', as: '/'
-    post '/update_problem_count', to: 'dashboard#update_problem_count'
+    get '', to: 'dashboard#index', as: 'dashboard_index'
+    post '/update_problem_count', to: 'dashboard#update_problem_count', as: 'dashboard_update_problem_count'
     resources :translations, only: [:index, :show]
   end
 

@@ -1,21 +1,25 @@
 require 'test_helper'
 
-class ProblemsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+class ProblemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
-    get :index
+    get problems_url
     assert_response :success
   end
 
   test "should get show" do
-    get :show, params: { id: 1 }
+    get problem_url(id: 1)
     assert_response :success
   end
 
   test "should get untranslated problem" do
-    get :show, params: { id: 3 }
+    get problem_url(id: 3)
     assert_response :success
+  end
+
+  test "should redirect to correct problem" do
+    get '/problem=2'
+    assert_redirected_to problem_path(id: 2)
   end
 
 end

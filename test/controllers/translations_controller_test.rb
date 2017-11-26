@@ -1,8 +1,6 @@
 require 'test_helper'
 
-class TranslationsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
-
+class TranslationsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @update = {
         title: 'New title',
@@ -15,18 +13,18 @@ class TranslationsControllerTest < ActionController::TestCase
   end
 
   test "should get new for translated problem" do
-    get :new, params: { problem_id: 1 }
+    get new_problem_translation_url(problem_id: 1)
     assert_response :success
   end
 
   test "should get new for untranslated problem" do
-    get :new, params: { problem_id: 3 }
+    get new_problem_translation_url(problem_id: 3)
     assert_response :success
   end
 
   test "should create translation" do
     assert_difference('Translation.count') do
-      post :create, params: { problem_id: 1, translation: @update }
+      post problem_translations_url(problem_id: 1, translation: @update)
     end
 
     assert_redirected_to problem_path(id: 1)
@@ -34,7 +32,7 @@ class TranslationsControllerTest < ActionController::TestCase
 
   test "should not create incorrect translation" do
     assert_no_difference('Translation.count') do
-      post :create, params: { problem_id: 1, translation: @incorrect }
+      post problem_translations_url(problem_id: 1, translation: @incorrect)
     end
   end
 end

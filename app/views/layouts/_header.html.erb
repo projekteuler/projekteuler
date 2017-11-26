@@ -7,7 +7,7 @@
             <%= link_to t('application.info'), about_info_path %>
             <%= link_to Problem.model_name.human(count: 2), problems_path %>
             <% if admin_signed_in? %>
-                <%= link_to t('admin.dashboard.index.administration'), :admin %>
+                <%= link_to t('admin.dashboard.index.administration'), admin_dashboard_index_path %>
             <% end %>
         <% end %>
         <%= nav class: 'navbar-right' do %>

@@ -2,6 +2,7 @@
 
 de:
   application:
+    site_title: "Projekt Euler"
     sign_in: 'Einloggen'
     sign_out: 'Ausloggen'
     info: "Info"

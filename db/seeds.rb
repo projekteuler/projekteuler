@@ -10,19 +10,34 @@ Translation.delete_all
 Problem.delete_all
 Admin.delete_all
 
-for i in 1..10 do
-  translation = Translation.create(
-             problem_id: i,
-             title: "Problem Nummer #{i}",
-             content: "Das hier ist der Inhalt von <b>Problem #{i}</b>.<br />Hier ist die zweite Zeile."
-  )
-  Problem.create(id: i, translation_id: translation.id)
+
+for i in 1..20 do
+  Problem.create!(id: i)
 end
 
-Problem.create(id: 11)
+for i in 1..10 do
+  translation = Translation.create!(
+             problem: Problem.find(i),
+             title: "Problem Nummer #{i}",
+             content: %Q(<p>Das hier ist der Inhalt von <b>Problem #{i}</b>.
+                  <br />Hier ist die zweite Zeile.</p>
+                  <p>Es können auch Formeln im Text (z.B. $1+2=3$) oder als eigene Zeile genutzt werden.</p>
+                  \\[ a^2 + b^2 = c^2 \\]
+                  )
+  )
 
-Admin.create(
+  problem = Problem.find(i)
+  problem.translation = translation
+  problem.save!
+end
+
+
+Admin.create!(
          email: 'admin@example.com',
          password: 'password',
          password_confirmation: 'password'
 )
+
+p "Created #{Problem.count} problems"
+p "Created #{Translation.count} translations"
+p "Created #{Admin.count} admins"

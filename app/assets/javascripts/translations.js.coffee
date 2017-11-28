@@ -18,3 +18,4 @@ $(document).on "turbolinks:load", loadCodeMirror
 
 $(document).on "click", '#translationNav a[href="#preview"]', ->
   $('#preview .problem-content').html(cm.getValue())
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);

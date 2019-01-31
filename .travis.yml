@@ -1,9 +1,10 @@
 language: ruby
 cache: bundler
 rvm:
+  - 2.6
+  - 2.5
   - 2.4
   - 2.3
-  - 2.2
 script:
   - export RAILS_ENV=test
   - bundle exec rake db:create db:migrate

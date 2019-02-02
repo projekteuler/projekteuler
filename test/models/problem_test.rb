@@ -14,6 +14,13 @@ class ProblemTest < ActiveSupport::TestCase
     assert problems(:one).is_translated?
   end
 
+  test "set_translation should modify status correctly" do
+    problems(:two).set_translation(translations(:translation_two_alternative))
+    assert translations(:translation_two).outdated?
+    assert translations(:translation_two_alternative).in_use?
+    assert_equal translations(:translation_two_alternative), problems(:two).translation
+  end
+
   test "should have correct original url" do
     assert_equal "https://projecteuler.net/problem=1", problems(:one).original_url
   end

@@ -9,4 +9,4 @@ de:
     new:
       new_translation: Neue Übersetzung für Problem %{id}
     notice:
-      successfully_created: Übersetzung wurde erfolgreich erstellt.
+      successfully_created: Der Übersetzungsvorschlag wurde eingereicht. Ein Organisator wird sich Ihren Vorschlag so bald wie möglich anschauen.

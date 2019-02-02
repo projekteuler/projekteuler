@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col-md-4">
       <h2>Ansehen</h2>
-      <p>Bisher wurden leider erst <%= Problem.translated_count %> der <%= Problem.count %> Probleme übersetzt, es gibt also noch einiges zu tun!</p>
+      <p>Sehen Sie sich die mathematischen Probleme in deutscher Sprache an.</p>
       <p>
         <%= link_to problems_path, class: 'btn btn-default' do %>
             Zu den Problemen &raquo;
@@ -22,14 +22,13 @@
       </p>
     </div>
     <div class="col-md-4">
-      <h2>Erweitern</h2>
-      <p>Sie haben in Zukunft auch die Möglichkeit, eigene Übersetzungen vorzuschlagen. An diesem Feature wird aber zurzeit noch gearbeitet.</p>
-      <p><a class="btn btn-default disabled" href="#" role="button">Übersetzung vorschlagen &raquo;</a></p>
+      <h2>Übersetzen</h2>
+      <p>Bisher wurden erst <%= Problem.translated_count %> der <%= Problem.count %> Probleme übersetzt. Helfen Sie mit, Übersetzungen zu erstellen und anzupassen!</p>
     </div>
     <div class="col-md-4">
       <h2>Verbessern</h2>
-      <p>Haben Sie Verbesserungsvorschläge für eine der Übersetzungen? Fehlt Ihnen eine Funktion auf der Webseite, oder ist Ihnen ein Fehler aufgefallen? Dann schreiben Sie uns!</p>
-      <p><a class="btn btn-default disabled" href="#" role="button">Zum Kontaktformular &raquo;</a></p>
+      <p>Vermissen Sie eine Funktion auf der Webseite, oder ist Ihnen ein Fehler aufgefallen? Dann helfen Sie beim Entwickeln der Webseite in Ruby on Rails!</p>
+      <p><a class="btn btn-default" href="https://github.com/pfischbeck/projekteuler" target="_blank" role="button">Projekt Euler auf GitHub &raquo;</a></p>
     </div>
   </div>
 </div>

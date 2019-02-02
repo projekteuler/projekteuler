@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131103802) do
+ActiveRecord::Schema.define(version: 2019_02_02_113250) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150131103802) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "problem_id"
+    t.integer "status", default: 0
     t.index ["problem_id"], name: "index_translations_on_problem_id"
   end
 

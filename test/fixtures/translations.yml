@@ -4,8 +4,16 @@ translation_one:
   problem_id: 1
   title: First title
   content: The content of the translation
+  status: 1
 
 translation_two:
   problem_id: 2
   title: Second title
   content: The content of the second translation
+  status: 1
+
+translation_two_alternative:
+  problem_id: 2
+  title: Second title
+  content: The changed content for the second problem
+  status: 0

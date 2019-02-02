@@ -1,5 +1,6 @@
 class Translation < ApplicationRecord
   belongs_to :problem, inverse_of: :translations
+  enum status: [:pending, :in_use, :outdated, :declined]
 
   validates :title, :content, :problem_id, presence: true
   validate :title_is_unique_among_other_problems

@@ -1,6 +1,9 @@
 # ruby encoding: utf-8
 
 de:
+  attributes:
+    created_at: Erstellt
+    updated_at: Aktualisiert
   application:
     site_title: "Projekt Euler"
     sign_in: 'Einloggen'
@@ -9,3 +12,7 @@ de:
     legal: "Impressum"
     copyright: "Copyright-Informationen"
     bootstrap_html: 'Entworfen mit <a href="http://getbootstrap.com/">Bootstrap</a>'
+  helpers:
+    submit:
+      translation:
+        create: "%{model} vorschlagen"

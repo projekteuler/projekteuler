@@ -10,3 +10,15 @@ de:
         success_message: "Problem-Anzahl wurde erfolgreich aktualisiert!"
         failure_message: "Problem-Anzahl konnte nicht aktualisiert werden! Grund: %{error}"
         no_problem_count: "Keine Problem-Anzahl gegeben!"
+    translations:
+      must_be_pending: "Übersetzung muss ausstehend sein, um akzeptiert oder abgelehnt zu werden!"
+      show:
+        accept_translation: "Akzeptieren"
+        decline_translation: "Ablehnen"
+        visit_current_translation: "Aktuelle Übersetzung anschauen"
+        already_translated: "Dieses Problem wurde bereits übersetzt."
+        is_new_translation: "Dieses Problem hat bisher keine Übersetzung."
+      accept:
+        success_message: "Übersetzung wurde erfolgreich akzeptiert!"
+      decline:
+        success_message: "Übersetzung wurde erfolgreich abgelehnt!"

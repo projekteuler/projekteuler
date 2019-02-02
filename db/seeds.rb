@@ -27,7 +27,7 @@ for i in 1..10 do
   )
 
   problem = Problem.find(i)
-  problem.translation = translation
+  problem.set_translation(translation)
   problem.save!
 end
 

@@ -11,6 +11,14 @@ class Problem < ApplicationRecord
     !!self.translation
   end
 
+  def set_translation(translation)
+    if self.is_translated?
+      self.translation.outdated!
+    end
+    self.update(translation: translation)
+    self.translation.in_use!
+  end
+
   def original_url
     "https://projecteuler.net/problem=#{self.id}"
   end

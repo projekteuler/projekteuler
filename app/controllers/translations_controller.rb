@@ -11,18 +11,12 @@ class TranslationsController < ApplicationController
   end
 
   # POST /translations
-  # POST /translations.json
   def create
     @translation = @problem.translations.new(translation_params)
-
-    respond_to do |format|
-      if @translation.save
-        format.html { redirect_to @problem, notice: t('translations.notice.successfully_created') }
-        format.json { render :show, status: :created, location: @translation }
-      else
-        format.html { render :new }
-        format.json { render json: @translation.errors, status: :unprocessable_entity }
-      end
+    if @translation.save
+      redirect_to @problem, notice: t('translations.notice.successfully_created')
+    else
+      render :new
     end
   end
 

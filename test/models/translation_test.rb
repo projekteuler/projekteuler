@@ -36,5 +36,6 @@ class TranslationTest < ActiveSupport::TestCase
         problem_id: 1
     )
     assert translation.save
+    assert translation.pending?
   end
 end

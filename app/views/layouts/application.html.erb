@@ -20,15 +20,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/header' %>
-<div class="container">
-  <%= flash_messages %>
-  <div class="row">
-    <div class="col-md-12" role="main">
+<main role="main">
+  <%= render 'layouts/header' %>
+  <div class="container">
+    <%= flash_messages %>
+    <div class="row">
       <%= yield %>
     </div>
   </div>
-</div>
+</main>
 
 <%= render 'layouts/footer' %>
 </body>

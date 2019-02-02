@@ -18,6 +18,7 @@ class ProblemTest < ActiveSupport::TestCase
     problems(:two).set_translation(translations(:translation_two_alternative))
     assert translations(:translation_two).outdated?
     assert translations(:translation_two_alternative).in_use?
+    assert_equal translations(:translation_two_alternative), problems(:two).translation
   end
 
   test "should have correct original url" do

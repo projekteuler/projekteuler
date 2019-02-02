@@ -6,6 +6,7 @@ class Admin::TranslationsControllerTest < ActionDispatch::IntegrationTest
   setup do
     login
     @translation = translations(:translation_one)
+    @translation_alternative = translations(:translation_two_alternative)
   end
   test "should get index" do
     get admin_translations_url
@@ -14,8 +15,19 @@ class Admin::TranslationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show translation" do
-    get admin_translation_url(id: @translation)
+    get admin_translation_url(translation_id: @translation)
     assert_response :success
   end
 
+  test "should accept translation" do
+    post admin_translation_accept_path(@translation_alternative)
+    assert_redirected_to problem_path(2)
+    assert_equal @translation_alternative, Problem.find(2).translation
+  end
+
+  test "should decline translation" do
+    post admin_translation_decline_path(@translation_alternative)
+    assert_redirected_to admin_translations_path
+    assert Translation.find(@translation_alternative.id).declined?
+  end
 end

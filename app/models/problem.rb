@@ -15,7 +15,7 @@ class Problem < ApplicationRecord
     if self.is_translated?
       self.translation.outdated!
     end
-    self.translation = translation
+    self.update(translation: translation)
     self.translation.in_use!
   end
 

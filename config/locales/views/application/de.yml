@@ -1,6 +1,9 @@
 # ruby encoding: utf-8
 
 de:
+  attributes:
+    created_at: Erstellt
+    updated_at: Aktualisiert
   application:
     site_title: "Projekt Euler"
     sign_in: 'Einloggen'

@@ -4,7 +4,7 @@ class Admin::TranslationsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    login
+    login_admin
     @translation = translations(:translation_one)
     @translation_alternative = translations(:translation_two_alternative)
   end

@@ -48,6 +48,8 @@ gem 'will_paginate-bootstrap', '~> 1.0.1'
 
 gem 'devise', '~> 4.5.0'
 gem 'devise-bootstrap-views', '~> 0.0.11'
+gem 'omniauth'
+gem 'omniauth-github'
 
 gem 'codemirror-rails', '~> 5.16.0'
 # Use ActiveModel has_secure_password

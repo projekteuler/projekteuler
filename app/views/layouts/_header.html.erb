@@ -6,16 +6,17 @@
         <%= nav class: 'navbar-left' do %>
             <%= link_to t('application.info'), about_info_path %>
             <%= link_to Problem.model_name.human(count: 2), problems_path %>
-            <% if admin_signed_in? %>
+            <% if user_signed_in? and current_user.admin? %>
                 <%= link_to t('admin.dashboard.index.administration'), admin_dashboard_index_path %>
             <% end %>
         <% end %>
         <%= nav class: 'navbar-right' do %>
             <%= link_to t('application.legal'), about_legal_path %>
-            <% if admin_signed_in? %>
-                <%= link_to(t('application.sign_out'), destroy_admin_session_path, method: :delete) %>
+            <% if user_signed_in? %>
+              <li>Eingeloggt als <b><%= current_user.name %></b></li>
+              <%= link_to(t('application.sign_out'), destroy_user_session_path, method: :delete) %>
             <% else %>
-                <%= link_to(t('application.sign_in'), new_admin_session_path) %>
+                <%= link_to(t('application.sign_in'), user_developer_omniauth_authorize_path) %>
             <% end %>
         <% end %>
     <% end %>

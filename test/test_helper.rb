@@ -10,8 +10,13 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def login
-    admin = admins(:admin)
+  def login_admin
+    admin = users(:admin)
     sign_in admin
+  end
+
+  def login_translator
+    translator = users(:translator)
+    sign_in translator
   end
 end

@@ -4,7 +4,7 @@ class Admin::DashboardControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
 
   setup do
-    login
+    login_admin
   end
 
   test "should get index" do

@@ -3,6 +3,6 @@ class AdminController < ApplicationController
 
   def authenticate!
     authenticate_user!
-    raise SecurityError unless current_user.admin?
+    throw(:warden) unless current_user.admin?
   end
 end

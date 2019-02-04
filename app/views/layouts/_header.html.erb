@@ -13,7 +13,12 @@
         <%= nav class: 'navbar-right' do %>
             <%= link_to t('application.legal'), about_legal_path %>
             <% if user_signed_in? %>
-              <li>Eingeloggt als <b><%= current_user.name %></b></li>
+              <span class="navbar-text">Eingeloggt als <b>
+                <%= current_user.name %>
+                <% if current_user.admin? %>
+                  <%= icon :star %>
+                <% end %>
+              </b></span>
               <%= link_to(t('application.sign_out'), destroy_user_session_path, method: :delete) %>
             <% else %>
                 <%= link_to(t('application.sign_in'), user_developer_omniauth_authorize_path) %>

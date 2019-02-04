@@ -22,7 +22,13 @@ Rails.application.routes.draw do
     resources :translations, only: [:new, :create]
   end
 
-  devise_for :admins, skip: :registrations
+  devise_for :users, :controllers => {
+      :omniauth_callbacks => "users/omniauth_callbacks"
+  }
+  devise_scope :user do
+    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  end
+
   namespace :admin do
     get '', to: 'dashboard#index', as: 'dashboard_index'
     post '/update_problem_count', to: 'dashboard#update_problem_count', as: 'dashboard_update_problem_count'

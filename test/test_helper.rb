@@ -10,8 +10,23 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def login
-    admin = admins(:admin)
+  def login_admin
+    admin = users(:admin)
     sign_in admin
   end
+
+  def login_translator
+    translator = users(:translator)
+    sign_in translator
+  end
+end
+
+
+class ActionDispatch::IntegrationTest
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+      provider: :github,
+      uid: 'translator',
+      name: 'translator'
+  })
 end

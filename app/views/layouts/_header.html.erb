@@ -21,7 +21,11 @@
               </b></span>
               <%= link_to(t('application.sign_out'), destroy_user_session_path, method: :delete) %>
             <% else %>
+              <% if Rails.env.development? %>
                 <%= link_to(t('application.sign_in'), user_developer_omniauth_authorize_path) %>
+              <% else %>
+                <%= link_to(t('application.sign_in'), user_github_omniauth_authorize_path) %>
+              <% end %>
             <% end %>
         <% end %>
     <% end %>

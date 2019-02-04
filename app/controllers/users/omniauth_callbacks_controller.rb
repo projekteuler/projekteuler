@@ -11,4 +11,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def developer
     sign_in_with "Developer"
   end
+
+  def github
+    sign_in_with "GitHub"
+  end
 end

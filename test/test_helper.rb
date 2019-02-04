@@ -20,3 +20,13 @@ class ActiveSupport::TestCase
     sign_in translator
   end
 end
+
+
+class ActionDispatch::IntegrationTest
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+      provider: :github,
+      uid: 'translator',
+      name: 'translator'
+  })
+end

@@ -34,8 +34,8 @@ gem 'sdoc', '~> 1.0.0',          group: :doc
 
 gem 'web-console', '~> 3.7.0', group: :development
 
-# Use Coveralls for coverage documentation
-gem 'coveralls', '~> 0.8.22', require: false
+# Use Codacy for coverage
+gem 'codacy-coverage', :require => false
 
 gem 'bootstrap-sass', '~> 3.4.0'
 gem 'autoprefixer-rails', '~> 9.4.6'

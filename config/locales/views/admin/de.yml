@@ -3,6 +3,7 @@ de:
     dashboard:
       index:
         administration: "Administration"
+        translations: "Übersetzungen"
         view_translations: "Übersetzungen anschauen"
         update_problem_count: "Problem-Anzahl aktualisieren"
         update: "Aktualisieren"

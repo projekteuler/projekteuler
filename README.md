@@ -1,10 +1,8 @@
 Projekt Euler
 =============
 
-[![Build Status](https://travis-ci.org/PFischbeck/projekteuler.svg?branch=master)](https://travis-ci.org/PFischbeck/projekteuler)
-[![Coverage Status](https://img.shields.io/coveralls/PFischbeck/projekteuler.svg)](https://coveralls.io/r/PFischbeck/projekteuler?branch=master)
-[![Code Climate](https://codeclimate.com/github/PFischbeck/projekteuler/badges/gpa.svg)](https://codeclimate.com/github/PFischbeck/projekteuler)
-[![security](https://hakiri.io/github/PFischbeck/projekteuler/master.svg)](https://hakiri.io/github/PFischbeck/projekteuler/master)
+[![Build Status](https://travis-ci.com/projekteuler/projekteuler.svg?branch=master)](https://travis-ci.org/PFischbeck/projekteuler)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/68921bff5347435f8fff10c1d6872568)](https://www.codacy.com/app/projekteuler/projekteuler)
 
 This is a rails app for the german translation of [projecteuler.net](https://projecteuler.net).
 

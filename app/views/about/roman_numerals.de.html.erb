@@ -1,31 +1,38 @@
 <%= provide(:title, 'Über römische Zahlen') %>
 
 <div class="page-header">
-  <h1>Über römische Zahlen</h1>
+  <h1>Über... römische Zahlen</h1>
 </div>
 <h3>Wie liest und schreibt man römische Zahlen?</h3>
 <br />
 
 <p>Traditionelle römische Zahlen bestehen aus den folgenden Werten:</p>
-<p style="margin-left:100px;">I = 1<br>
+<p style="margin-left:100px;font-family:courier new,monospace;">
+  I = 1<br>
   V = 5<br>
   X = 10<br>
   L = 50<br>
   C = 100<br>
   D = 500<br>
   M = 1000</p>
-<p>Sie werden von vielen verschiedenen Regeln in Bezug auf die römischen Zahlen lesen, aber die Wahrheit ist, dass die Römer nur eine einfache Regel hatten:</p>
-<p style="text-align:center;"><b>Zeichen müssen in absteigender Größen-Reihenfolge angeordnet sein.</b></p>
-<p>Beispiel: Drei Wege, wie sechzehn geschrieben werden könnte, sind XVI, XIIIIII, VVVI; dabei ist die erste Variante die bevorzugte Form, da sie die wenigesten Zeichen benutzt.</p>
-<p>Die "Absteigende Größe"-Regel wurde eingeführt, um die Benutzung von subtraktiven Kombinationen zu erlauben. Beispiel: vier kann als IV geschrieben werden, denn es ist eins vor fünf. Da die Regel erfordert, dass die Zeichen in der Größen-Reihenfolge angeordnet sind, sollte es dem Leser klar sein, dass das Vorkommen eines kleineren Zeichens, sozusagen fehl am Platz, eindeutig da ist, um vom folgenden Zeichen abgezogen zu werden. Beispiel: neunzehn könnte geschrieben werden als XIX = X + IX (9). Beachten Sie auch, wie die Regel erfordert, dass X (zehn) vor IX (neun) platziert werden muss, und dass IXX keine gültige Konfiguration wäre.</p>
-<p>Allgemein haben die Römer versucht, so wenig Zeichen wie möglich zu benutzen, um Zahlen anzuzeigen. Aus diesem Grund wäre XIX die bevorzugte Form von neunzehn im Vergleich zu anderen gültigen Kombinationen wie XVIIII oder XVIV. Jedoch war es KEINE Regel, und es gibt in Rom immer noch viele Beispiele, wo die Einsparung der Zeichen nicht benutzt wurde. Beispiel: im berühmten Kolosseum sind die Zeichen über dem neunundvierzigsten Eingang geschrieben als XXXXVIIII, und nicht IL oder XLIX (siehe Regeln unten).</p>
-<p>Trotzdem haben wir über die Zeit neue, einschränkende Regeln eingeführt. Bis zum Mittelalter war es üblich geworden, mehr als drei aufeinanderfolgende identische Zeichen zu benutzen. Das heißt, IV wurde geschrieben anstatt von IIII, IX anstatt von VIIII und so weiter. Außerdem wurden den subtraktiven Kombinationen folgende Regeln auferlegt:</p>
+<p>Damit eine Zahl in römischer Schreibweise als gültig gilt, müssen drei grundlegende Regeln befolgt werden.</p>
+<p style="text-align:center;">
+  <b>Zeichen müssen in absteigender Größen-Reihenfolge angeordnet sein.</b><br>
+  <b>Kleinere Zahlenwerte dürfen zusammen nur kleiner sein als <span style="font-family:courier new,monospace;">M</span>, <span style="font-family:courier new,monospace;">C</span> und <span style="font-family:courier new,monospace;">X</span>, wenn diese vorkommen.</b><br>
+  <b><span style="font-family:courier new,monospace;">D</span>, <span style="font-family:courier new,monospace;">L</span> und <span style="font-family:courier new,monospace;">V</span> können jeweils nur einmal vorkommen.</b>
+</p>
+<p>Beispielsweise kann die Zahl sechzen als <span style="font-family:courier new,monospace;">XVI</span> oder <span style="font-family:courier new,monospace;">XIIIIII</span> geschrieben werden, wobei die erste Variante die bevorzugte Form ist, da sie die wenigesten Zeichen benutzt. Wir könnten nicht <span style="font-family:courier new,monospace;">IIIIIIIIIIIIIIII</span> schreiben, denn dann würden wir <span style="font-family:courier new,monospace;">X</span> (zehn) mit kleineren Werten bilden. Ebenso können wir nicht <span style="font-family:courier new,monospace;">VVVI</span> schreiben, denn dann sind die zweite und dritte Regel verletzt.</p>
+<p>Die "Absteigende Größe"-Regel wurde eingeführt, um die Benutzung von subtraktiven Kombinationen zu erlauben. Beispielsweise kann vier als <span style="font-family:courier new,monospace;">IV</span> geschrieben werden, denn es ist eins vor fünf. Da die Regel erfordert, dass die Zeichen in der Größen-Reihenfolge angeordnet sind, sollte es dem Leser klar sein, dass das Vorkommen eines kleineren Zeichens, sozusagen fehl am Platz, eindeutig da ist, um vom folgenden Zeichen abgezogen und nicht addiert zu werden.</p>
+<p>Beispielsweise könnte neunzehn geschrieben werden als <span style="font-family:courier new,monospace;">XIX</span> = <span style="font-family:courier new,monospace;">X</span> (zehn) + <span style="font-family:courier new,monospace;">IX</span> (neun). Beachten Sie auch, wie die Regel erfordert, dass <span style="font-family:courier new,monospace;">X</span> (zehn) vor <span style="font-family:courier new,monospace;">IX</span>(neun) platziert werden muss, und dass <span style="font-family:courier new,monospace;">IXX</span> keine gültige Konfiguration wäre (Absteigende-Größe-Regel). Ebenso wäre <span style="font-family:courier new,monospace;">XVIV</span> ungültig, weil <span style="font-family:courier new,monospace;">V</span> nur einmal vorkommen darf.</p>
+<p>Allgemein haben die Römer versucht, so wenig Zeichen wie möglich zur Darstellung von Zahlen zu benutzen. Aus diesem Grund wäre <span style="font-family:courier new,monospace;">XIX</span> die bevorzugte Form von neunzehn im Vergleich zu anderen gültigen Kombinationen wie <span style="font-family:courier new,monospace;">XIIIIIIIII</span> oder <span style="font-family:courier new,monospace;">XVIIII</span>.</p>
+<p>Bis zum Mittelalter war es üblich geworden, mehr als drei aufeinanderfolgende identische Zeichen zu vermeiden, indem die kompakteren subtraktiven Kombinationen genutzt wurden. Das heißt, <span style="font-family:courier new,monospace;">IV</span> wurde geschrieben anstatt von <span style="font-family:courier new,monospace;">IIII</span>, <span style="font-family:courier new,monospace;">IX</span> anstatt von <span style="font-family:courier new,monospace;">VIIII</span> und so weiter.</p>
+<p>Zusätzlich zu den drei Regeln oben müssen die folgenden vier Regeln für die Benutzung subtraktiver befolgt werden.</p>
 <ol style="list-style-type:lower-roman;">
-  <li>Nur I, X und C können als führendes Zeichen im Teil eines subtraktiven Paars benutzt werden.</li>
-  <li>I kann nur vor V und X stehen.</li>
-  <li>X kann nur vor L und C stehen.</li>
-  <li>C kann nur vor D und M stehen.</li>
+  <li>Nur ein <span style="font-family:courier new,monospace;">I</span>, <span style="font-family:courier new,monospace;">X</span> und <span style="font-family:courier new,monospace;">C</span> können als führendes Zeichen eines subtraktiven Paars benutzt werden.</li>
+  <li><span style="font-family:courier new,monospace;">I</span> kann nur vor <span style="font-family:courier new,monospace;">V</span> und <span style="font-family:courier new,monospace;">X</span> stehen.</li>
+  <li><span style="font-family:courier new,monospace;">X</span> kann nur vor <span style="font-family:courier new,monospace;">L</span> und <span style="font-family:courier new,monospace;">C</span> stehen.</li>
+  <li><span style="font-family:courier new,monospace;">C</span> kann nur vor <span style="font-family:courier new,monospace;">D</span> und <span style="font-family:courier new,monospace;">M</span> stehen.</li>
 </ol>
-<p><b>Diese letzten vier Regeln gelten als Gesetz</b>, und allgemein ist es bevorzugt, aber nicht notwendig, Zahlen unter Benutzung der minimalen Anzahl von Zeichen darzustellen. Das bedeutet, dass IL als ungültige Weise gilt, neunundvierzig zu schreiben, und wobei XXXXVIIII, XXXXIX, XLVIIII und XLIX alle zulässig sind, ist das letzt die bevorzugte (minimale) Form.</p>
-<p>Es wird also erwartet, die höheren Werte zu benutzen, wann immer es möglich ist; Beispiel: L sollte benutzt werden statt XXXX, oder C sollte benutzt werden statt LL. Jedoch wurde sogar diese "Regel" missachtet: in der Kirche von Sant'Agnese fuori le Mura (Sankt Agnes vor den Mauern), gefunden in Rom, ist das Datum MCCCCCCVI (1606) an der vergoldeten und verwahrten Holzdecke geschrieben; Ich bin sicher, dass viele argumentieren würden, dass es als MDCVI hätte geschrieben werden sollen.</p>
-<p>Jedoch, wenn man dem Spruch "Wenn in Rom, tu es wie die Römer" folgt, und wir sehen, wie die Römer Zeichen schreiben, dann gibt es uns deutlich mehr Freiheit, als viele zugeben würden.</p>
+<p>Das bedeutet, dass <span style="font-family:courier new,monospace;">IL</span> als ungültige Weise gilt, neunundvierzig zu schreiben, und während <span style="font-family:courier new,monospace;">XXXXVIIII</span>, <span style="font-family:courier new,monospace;">XXXXIX</span>, <span style="font-family:courier new,monospace;">XLVIIII</span> und <span style="font-family:courier new,monospace;">XLIX</span> alle zulässig sind, ist das letzt die bevorzugte (minimale) Form. Jedoch war die minimale Form keine Regel, und es gibt in Rom immer noch viele Beispiele, wo die Einsparung der Zeichen nicht benutzt wurde. Beispielsweise sind im berühmten Kolosseum die Zeichen über dem neunundvierzigsten Eingang geschrieben als <span style="font-family:courier new,monospace;">XXXXVIIII</span>, und nicht <span style="font-family:courier new,monospace;">XLIX</span>.</p>
+<p>Es wird auch erwartet, die höheren Werte zu benutzen, wann immer es möglich ist; Beispielsweise sollte <span style="font-family:courier new,monospace;">V</span> benutzt werden statt <span style="font-family:courier new,monospace;">IIIII</span>, <span style="font-family:courier new,monospace;">L</span> statt <span style="font-family:courier new,monospace;">XXXXX</span> und <span style="font-family:courier new,monospace;">D</span> statt <span style="font-family:courier new,monospace;">CCCCC</span>. Jedoch ist in der Kirche von Sant'Agnese fuori le Mura (Sankt Agnes vor den Mauern), zu finden in Rom, das Datum <span style="font-family:courier new,monospace;">MCCCCCCVI</span> (1606) an der vergoldeten Holzkassettendecke geschrieben; ich bin sicher, dass viele argumentieren würden, dass viele argumentieren würden, es hätte als <span style="font-family:courier new,monospace;">MDCVI</span> geschrieben werden müssen.</p>
+<p>Jedoch, wenn man dem Spruch "Wenn du in Rom bist, verhalte dich wie die Römer" folgt, und wir sehen, wie die Römer Zeichen schreiben, dann gibt es uns deutlich mehr Freiheit, als viele zugeben würden.</p>

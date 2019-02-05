@@ -8,6 +8,9 @@
             <%= link_to Problem.model_name.human(count: 2), problems_path %>
             <% if user_signed_in? and current_user.admin? %>
                 <%= link_to t('admin.dashboard.index.administration'), admin_dashboard_index_path %>
+                <%= link_to admin_translations_path do %>
+                  <%= t('admin.dashboard.index.translations') %> <span class="badge"><%= Translation.pending.count %></span>
+                <% end %>
             <% end %>
         <% end %>
         <%= nav class: 'navbar-right' do %>

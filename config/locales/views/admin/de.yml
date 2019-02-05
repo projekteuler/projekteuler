@@ -3,6 +3,7 @@ de:
     dashboard:
       index:
         administration: "Administration"
+        translations: "Übersetzungen"
         view_translations: "Übersetzungen anschauen"
         update_problem_count: "Problem-Anzahl aktualisieren"
         update: "Aktualisieren"
@@ -11,6 +12,8 @@ de:
         failure_message: "Problem-Anzahl konnte nicht aktualisiert werden! Grund: %{error}"
         no_problem_count: "Keine Problem-Anzahl gegeben!"
     translations:
+      index:
+        anonymous: "Anonym"
       must_be_pending: "Übersetzung muss ausstehend sein, um akzeptiert oder abgelehnt zu werden!"
       show:
         accept_translation: "Akzeptieren"

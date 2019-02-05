@@ -1,6 +1,9 @@
 <% provide(:title, t('problems.show.problem_subtitle', id: @problem.id)) %>
 
 <div class="page-header">
+  <p class="text-muted">
+    <%= render 'shared/authors', authors: @problem.authors, has_anonymous_author: @problem.has_anonymous_author? %>
+  </p>
   <h1><%= @problem.title %> <small><%= t '.problem_subtitle', id: @problem.id %></small></h1>
 </div>
 <%= link_to new_problem_translation_path(@problem), class: 'btn btn-default btn-sm pull-right' do %>

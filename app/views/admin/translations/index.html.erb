@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <th><%= Translation.human_attribute_name(:created_at) %></th>
+      <th><%= Translation.human_attribute_name(:author) %></th>
       <th><%= Translation.human_attribute_name(:problem_id) %></th>
       <th><%= Translation.human_attribute_name(:title) %></th>
     </tr>
@@ -16,6 +17,13 @@
     <% @translations.each do |translation| %>
       <tr>
         <td><div data-toggle="tooltip" data-placement="left" title="<%= l translation.created_at %>"><%= time_ago_in_words(translation.created_at) %></div></td>
+        <td>
+          <% if translation.has_author? %>
+            <%= translation.author.name %>
+          <% else %>
+            <i><%= t('.anonymous') %></i>
+          <% end %>
+        </td>
         <td><%= translation.problem_id %></td>
         <td><%= link_to translation.title, [:admin, translation] %></td>
       </tr>

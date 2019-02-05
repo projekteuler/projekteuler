@@ -1,0 +1,11 @@
+<% if authors.empty? %>
+  Diese Übersetung wurde anonym erstellt.
+<% else %>
+  Diese Übersetzung wurde von
+  <% if local_assigns[:has_anonymous_author] %>
+    <%= (authors.map(&:name)+Array("anonymen Nutzern")).to_sentence %>
+  <% else %>
+    <%= authors.map(&:name).to_sentence %>
+  <% end %>
+   erstellt.
+<% end %>

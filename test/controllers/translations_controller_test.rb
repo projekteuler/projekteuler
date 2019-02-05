@@ -22,12 +22,22 @@ class TranslationsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create translation" do
+  test "should create translation anonymously" do
     assert_difference('Translation.count') do
       post problem_translations_url(problem_id: 1, translation: @update)
     end
 
     assert_redirected_to problem_path(id: 1)
+  end
+
+  test "should create translation with user" do
+    login_translator
+    assert_difference('Translation.count') do
+      post problem_translations_url(problem_id: 1, translation: @update)
+    end
+
+    assert_redirected_to problem_path(id: 1)
+    assert_equal users(:translator), Translation.last.author
   end
 
   test "should not create incorrect translation" do

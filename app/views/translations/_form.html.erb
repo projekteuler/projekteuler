@@ -13,5 +13,11 @@
       </div>
     <% end %>
   </div>
+  <div class="alert alert-info">
+    <%= t '.copyright_warning_html' %>
+    <% if not user_signed_in? %>
+      <%= t '.not_logged_in_warning' %>
+    <% end %>
+  </div>
   <%= f.submit %>
 <% end %>

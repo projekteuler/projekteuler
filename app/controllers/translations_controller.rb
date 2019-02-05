@@ -13,6 +13,9 @@ class TranslationsController < ApplicationController
   # POST /translations
   def create
     @translation = @problem.translations.new(translation_params)
+    if user_signed_in?
+      @translation.author = current_user
+    end
     if @translation.save
       redirect_to @problem, notice: t('translations.notice.successfully_created')
     else

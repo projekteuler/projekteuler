@@ -4,7 +4,8 @@ class Problem < ApplicationRecord
   delegate :title, :content, to: :translation
 
   has_many :translations, inverse_of: :problem
-  
+  has_many :authors, -> { where(translations: { status: [:in_use, :outdated] }).distinct }, through: :translations
+
   self.per_page = 50
 
   def is_translated?
@@ -17,6 +18,10 @@ class Problem < ApplicationRecord
     end
     self.update(translation: translation)
     self.translation.in_use!
+  end
+
+  def has_anonymous_author?
+    translations.where(status: [:in_use, :outdated], author: nil).any?
   end
 
   def original_url

@@ -1,6 +1,9 @@
 <% provide(:title, t('problems.show.problem_subtitle', id: @translation.problem_id)) %>
 
 <div class="page-header">
+  <p class="text-muted">
+    <%= render 'shared/authors', authors: Array(@translation.author) %>
+  </p>
   <h1><%= @translation.title %> <small><%= t 'problems.show.problem_subtitle', id: @translation.problem_id %></small></h1>
 </div>
 

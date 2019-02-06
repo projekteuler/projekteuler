@@ -17,7 +17,7 @@ gem 'uglifier', '~> 4.1.20'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.2.2'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'mini_racer', platform: :ruby
 
 gem 'rails-i18n', '~> 5.1.3'
 

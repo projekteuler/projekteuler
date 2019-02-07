@@ -253,7 +253,6 @@ DEPENDENCIES
   devise-bootstrap-views (~> 0.0.11)
   jbuilder (~> 2.8.0)
   jquery-rails (~> 4.3.3)
-  mini_racer
   mysql2 (~> 0.5.2)
   omniauth
   omniauth-github

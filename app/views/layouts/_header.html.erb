@@ -1,6 +1,9 @@
 <%= navbar position: :static do %>
     <%= vertical do %>
-        <%= link_to t('application.site_title'), root_path %>
+      <%= link_to root_path, style:'display:flex;align-items:center' do %>
+        <%= image_tag 'logo.png', height: '35px' %>
+        <p class="navbar-text"><%= t('application.site_title') %></p>
+      <% end %>
     <% end %>
     <%= horizontal do %>
         <%= nav class: 'navbar-left' do %>

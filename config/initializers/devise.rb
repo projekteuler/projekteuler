@@ -237,7 +237,7 @@ Devise.setup do |config|
     config.omniauth :developer, fields: [:name], uid_field: :name
   end
   if Rails.env.production?
-    config.omniauth :github, Rails.application.credentials.github[:client_id], Rails.application.credentials.github[:client_secret], scope: ''
+    config.omniauth :github, ENV['GITHUB_CLIENT_ID'], ENV['GITHUB_CLIENT_SECRET'], scope: ''
   end
   if Rails.env.test?
     config.omniauth :github, '', '', scope: ''

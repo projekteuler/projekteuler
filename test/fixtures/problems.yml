@@ -11,3 +11,7 @@ two:
 three:
   id: 3
 
+four:
+  id: 4
+  translation: translation_with_html
+

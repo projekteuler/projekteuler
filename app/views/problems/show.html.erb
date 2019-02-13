@@ -11,7 +11,7 @@
 <% end %>
 <%= panel do %>
     <div class="panel-body problem-content">
-      <%= sanitize @problem.content %>
+      <%= sanitize @problem.content, scrubber: TranslationContentScrubber.new %>
     </div>
 <% end %>
 <div class="text-center">

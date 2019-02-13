@@ -26,7 +26,7 @@ class ProblemTest < ActiveSupport::TestCase
   end
 
   test "should return correct number of translated problems" do
-    assert_equal 2, Problem.translated_count
+    assert_equal 3, Problem.translated_count
   end
 
   test "should allow for problem count updating" do
@@ -44,7 +44,7 @@ class ProblemTest < ActiveSupport::TestCase
     assert_raises ArgumentError do
       Problem.update_count(1)
     end
-    assert_equal 3, Problem.count()
+    assert_equal 4, Problem.count()
     assert_equal "First title", Problem.find(1).title
   end
 end

@@ -17,3 +17,9 @@ translation_two_alternative:
   title: Second title
   content: The changed content for the second problem
   status: 0
+
+translation_with_html:
+  problem_id: 4
+  title: Some title
+  content: 'p>This is some <b>custom</b> text.</p><p style="text-align:center;">This is centered.</p>'
+  status: 1

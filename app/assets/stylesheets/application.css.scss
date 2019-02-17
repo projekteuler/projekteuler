@@ -72,4 +72,10 @@ body {
     @extend .alert-info;
     margin-bottom: 0px;
   }
+
+  dfn {
+    border-bottom: 1px dotted;
+    font-style: normal;
+    cursor: help;
+  }
 }

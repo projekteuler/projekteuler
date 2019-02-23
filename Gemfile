@@ -37,7 +37,7 @@ gem 'web-console', '~> 3.7.0', group: :development
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false
 
-gem 'bootstrap-sass', '~> 3.4.0'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'autoprefixer-rails', '~> 9.4.6'
 
 gem 'bh', '~> 1.3.6'

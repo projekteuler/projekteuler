@@ -67,10 +67,14 @@ body {
     padding: 1px;
   }
 
+  // Make info/note boxes styled like bootstrap info alerts
   > .info, > .note {
     @extend .alert;
     @extend .alert-info;
     margin-bottom: 0px;
+    > a {
+      @extend .alert-link;
+    }
   }
 
   dfn {

@@ -1,5 +1,6 @@
 class TranslationsController < ApplicationController
   before_action :set_problem, only: [:new, :create]
+  before_action :set_accept, only: [:create]
 
   # GET /translations/new
   def new
@@ -17,7 +18,12 @@ class TranslationsController < ApplicationController
       @translation.author = current_user
     end
     if @translation.save
-      redirect_to @problem, notice: t('translations.notice.successfully_created')
+      if @accept
+        @problem.set_translation(@translation)
+        redirect_to @problem, notice: t('translations.notice.successfully_created_and_accepted')
+      else
+        redirect_to @problem, notice: t('translations.notice.successfully_created')
+      end
     else
       render :new
     end
@@ -31,5 +37,13 @@ class TranslationsController < ApplicationController
 
     def set_problem
       @problem = Problem.find(params[:problem_id])
+    end
+
+    def set_accept
+      if user_signed_in? and current_user.admin?
+        @accept = params.fetch(:accept, false)
+      else
+        @accept = false
+      end
     end
 end

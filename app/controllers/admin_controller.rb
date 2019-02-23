@@ -1,8 +1,3 @@
 class AdminController < ApplicationController
-  before_action :authenticate!
-
-  def authenticate!
-    authenticate_user!
-    throw(:warden) unless current_user.admin?
-  end
+  before_action :authenticate_admin!
 end

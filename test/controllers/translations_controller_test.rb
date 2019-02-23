@@ -40,6 +40,28 @@ class TranslationsControllerTest < ActionDispatch::IntegrationTest
     assert_equal users(:translator), Translation.last.author
   end
 
+  test "should create and accept translation from admin" do
+    login_admin
+    assert_difference('Translation.count') do
+      post problem_translations_url(problem_id: 1, translation: @update, accept: true)
+    end
+
+    assert_redirected_to problem_path(id: 1)
+    assert_equal users(:admin), Translation.last.author
+    assert_equal Problem.find(1).translation, Translation.last
+  end
+
+  test "should create but not accept translation from normal user" do
+    login_translator
+    assert_difference('Translation.count') do
+      post problem_translations_url(problem_id: 1, translation: @update, accept: true)
+    end
+
+    assert_redirected_to problem_path(id: 1)
+    assert_equal users(:translator), Translation.last.author
+    assert_not_equal Problem.find(1).translation, Translation.last
+  end
+
   test "should not create incorrect translation" do
     assert_no_difference('Translation.count') do
       post problem_translations_url(problem_id: 1, translation: @incorrect)

@@ -8,7 +8,9 @@ de:
       translation_source_explanation: Hier kommt der HTML-Quelltext der Übersetzung hin.
       copyright_warning_html: Sie erklären sich einverstanden, dass die Übersetzung unter der Creative Commons Lizenz <a class="alert-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de" target="_blank">CC BY-NC-SA 4.0</a> veröffentlicht wird.
       not_logged_in_warning: Wenn Sie wollen, dass die Übersetzung Ihnen zugeordnet werden kann, müssen Sie sich einloggen (oben rechts), andernfalls ist sie anonym.
+      save_and_accept: Übersetzung direkt setzen
     new:
       new_translation: Neue Übersetzung für Problem %{id}
     notice:
       successfully_created: Der Übersetzungsvorschlag wurde eingereicht. Ein Organisator wird sich Ihren Vorschlag so bald wie möglich anschauen.
+      successfully_created_and_accepted: Die Übersetzung wurde erfolgreich erstellt und akzeptiert.

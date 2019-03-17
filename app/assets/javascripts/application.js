@@ -20,5 +20,5 @@
 //= require codemirror/modes/css
 //= require codemirror/modes/javascript
 //= require codemirror/modes/htmlmixed
-//= require translations
-//= require_tree .
+//= require mathjax-config
+//= require init

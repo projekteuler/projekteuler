@@ -5,18 +5,7 @@
   <%= favicon_link_tag %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-         inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-         displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
-         processEscapes: true
-      },
-      "HTML-CSS": { availableFonts: ["TeX"] }
-    });
-  </script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML' async></script>
+  <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full,Safe', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>

@@ -1,6 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+window.App ||= {}
 
 cm = null
 
@@ -13,8 +11,12 @@ loadCodeMirror = ->
       mode: "text/html"
     })
 
-$(document).on "turbolinks:load", loadCodeMirror
+App.init = ->
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  loadCodeMirror();
 
+$(document).on "turbolinks:load", ->
+  App.init()
 
 $(document).on "click", '#translationNav a[href="#preview"]', ->
   $('#preview .problem-content').html(cm.getValue())

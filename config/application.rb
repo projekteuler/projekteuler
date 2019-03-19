@@ -17,7 +17,12 @@ module Projekteuler
     # the framework and any gems in your application.
 
     config.action_dispatch.default_headers = {
-        'X-Frame-Options' => 'DENY'
+        'X-Frame-Options' => 'DENY',
+        'X-XSS-Protection' => '1; mode=block',
+        'X-Content-Type-Options' => 'nosniff',
+        'X-Download-Options' => 'noopen',
+        'X-Permitted-Cross-Domain-Policies' => 'none',
+        'Referrer-Policy' => 'strict-origin-when-cross-origin'
     }
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.

@@ -46,7 +46,7 @@ gem 'will_paginate', '~> 3.1.6'
 gem 'will-paginate-i18n', '~> 0.1.15'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
-gem 'devise', '~> 4.5.0'
+gem 'devise', '~> 4.6.0'
 gem 'devise-bootstrap-views', '~> 0.0.11'
 gem 'omniauth'
 gem 'omniauth-github'

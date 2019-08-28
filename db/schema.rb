@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_04_164033) do
+ActiveRecord::Schema.define(version: 2019_08_28_084343) do
 
   create_table "problems", force: :cascade do |t|
     t.datetime "created_at"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_02_04_164033) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "remember_token"
   end
 
 end

@@ -9,8 +9,9 @@ de:
     sign_in: 'Einloggen'
     sign_out: 'Ausloggen'
     info: "Info"
+    privacy: "Datenschutz"
     legal: "Impressum"
-    copyright: "Copyright-Informationen"
+    copyright: "Copyright"
     bootstrap_html: 'Entworfen mit <a href="http://getbootstrap.com/">Bootstrap</a>'
   helpers:
     submit:

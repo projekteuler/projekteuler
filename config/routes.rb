@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'about/info'
   get 'about/copyright'
   get 'about/legal'
+  get 'about/privacy'
 
   get 'about/roman_numerals'
 

@@ -14,7 +14,6 @@
             <% end %>
         <% end %>
         <%= nav class: 'navbar-right' do %>
-            <%= link_to t('application.legal'), about_legal_path %>
             <% if user_signed_in? %>
               <span class="navbar-text">Eingeloggt als <b>
                 <%= current_user.name %>

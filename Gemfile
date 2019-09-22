@@ -11,11 +11,11 @@ gem 'mysql2', '~> 0.5.2', group: :production
 gem 'bootsnap', require: false
 
 # Use SCSS for stylesheets
-gem 'sassc-rails', '~> 2.1.0'
+gem 'sassc-rails', '~> 2.1.2'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 4.1.20'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.2.2'
+gem 'coffee-rails', '~> 5.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -24,11 +24,11 @@ gem 'rails-i18n', '~> 5.1.3'
 gem 'rails-controller-testing'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '~> 4.3.3'
+gem 'jquery-rails', '~> 4.3.5'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', '~> 5.2.0'
+gem 'turbolinks', '~> 5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.8.0'
+gem 'jbuilder', '~> 2.9.1'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 1.0.0',          group: :doc
 
@@ -38,16 +38,15 @@ gem 'web-console', '~> 3.7.0', group: :development
 gem 'codacy-coverage', :require => false
 
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'autoprefixer-rails', '~> 9.4.6'
+gem 'autoprefixer-rails', '~> 9.6.1'
 
 gem 'bh', '~> 1.3.6'
 
-gem 'will_paginate', '~> 3.1.6'
+gem 'will_paginate', '~> 3.1.8'
 gem 'will-paginate-i18n', '~> 0.1.15'
-gem 'will_paginate-bootstrap', '~> 1.0.1'
+gem 'will_paginate-bootstrap', '~> 1.0.2'
 
-gem 'devise', '~> 4.6.0'
-gem 'devise-bootstrap-views', '~> 0.0.11'
+gem 'devise', '~> 4.7.1'
 gem 'omniauth'
 gem 'omniauth-github'
 

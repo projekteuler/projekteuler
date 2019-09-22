@@ -50,7 +50,6 @@ gem 'devise', '~> 4.7.1'
 gem 'omniauth'
 gem 'omniauth-github'
 
-gem 'codemirror-rails', '~> 5.16.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -11,8 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
- *= require devise_bootstrap_views
- *= require codemirror
+ *= require codemirror/codemirror
  *= require_self
  */
 

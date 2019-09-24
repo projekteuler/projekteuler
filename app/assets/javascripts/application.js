@@ -14,11 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require codemirror
-//= require codemirror/addons/display/placeholder
-//= require codemirror/modes/xml
-//= require codemirror/modes/css
-//= require codemirror/modes/javascript
-//= require codemirror/modes/htmlmixed
+//= require codemirror/codemirror
+//= require codemirror/addon/display/placeholder
+//= require codemirror/mode/xml
+//= require codemirror/mode/css
+//= require codemirror/mode/javascript
+//= require codemirror/mode/htmlmixed
 //= require mathjax-config
 //= require init

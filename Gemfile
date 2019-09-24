@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.2.1'
+gem 'rails', '6.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.3.13'
+gem 'sqlite3', '~> 1.4.1'
 
 gem 'mysql2', '~> 0.5.2', group: :production
 
@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 5.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'rails-i18n', '~> 5.1.3'
+gem 'rails-i18n', '~> 6.0.0'
 
 gem 'rails-controller-testing'
 
@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.9.1'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 1.0.0',          group: :doc
 
-gem 'web-console', '~> 3.7.0', group: :development
+gem 'web-console', '~> 4.0.1', group: :development
 
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false

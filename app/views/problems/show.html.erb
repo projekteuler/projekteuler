@@ -6,8 +6,18 @@
   </p>
   <h1><%= @problem.title %> <small><%= t '.problem_subtitle', id: @problem.id %></small></h1>
 </div>
+<% if Problem.exists?(@problem.id-1) %>
+  <%= link_to problem_path(@problem.id-1), title: t('problems.show.problem_subtitle', id: @problem.id-1), class: 'problem-prev' do %>
+    <%= icon :menu_left %>
+  <% end %>
+<% end %>
+<% if Problem.exists?(@problem.id+1) %>
+  <%= link_to problem_path(@problem.id+1), title: t('problems.show.problem_subtitle', id: @problem.id+1), class: 'problem-next' do %>
+    <%= icon :menu_right %>
+  <% end %>
+<% end %>
 <%= link_to new_problem_translation_path(@problem), class: 'btn btn-default btn-sm pull-right' do %>
-    <%= icon :pencil %> <%= t '.improve_translation' %>
+  <%= icon :pencil %> <%= t '.improve_translation' %>
 <% end %>
 <%= panel do %>
     <div class="panel-body problem-content">

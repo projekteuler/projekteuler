@@ -10,13 +10,27 @@ Translation.delete_all
 Problem.delete_all
 User.delete_all
 
+admin = User.create!(
+    provider: :developer,
+    uid: "admin",
+    name: "admin",
+    role: :admin
+)
 
-for i in 1..20 do
+translator = User.create!(
+    provider: :developer,
+    uid: "translator",
+    name: "translator",
+    role: :user
+)
+
+for i in 1..60 do
   Problem.create!(id: i)
 end
 
 for i in 1..10 do
   translation = Translation.create!(
+   author: translator,
    problem: Problem.find(i),
    title: "Problem Nummer #{i}",
    content: %Q(<p>Das hier ist der Inhalt von <b>Problem #{i}</b>.
@@ -29,19 +43,6 @@ for i in 1..10 do
   problem.set_translation(translation)
 end
 
-
-User.create!(
-  provider: :developer,
-  uid: "admin",
-  name: "admin",
-  role: 1
-)
-
-User.create!(
-  provider: :developer,
-  uid: "translator",
-  name: "translator"
-)
 
 p "Created #{Problem.count} problems"
 p "Created #{Translation.count} translations"

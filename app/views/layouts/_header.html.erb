@@ -15,18 +15,17 @@
         <% end %>
         <%= nav class: 'navbar-right' do %>
             <% if user_signed_in? %>
-              <span class="navbar-text">Eingeloggt als <b>
-                <%= current_user.name %>
+              <span class="navbar-text"><%= t 'application.logged_in_as_html', name: current_user.name %>
                 <% if current_user.admin? %>
-                  <%= icon :star %>
+                  <b><%= icon :star %></b>
                 <% end %>
-              </b></span>
+              </span>
               <%= link_to(t('application.sign_out'), destroy_user_session_path, method: :delete) %>
             <% else %>
               <% if Rails.env.development? %>
-                <%= link_to(t('application.sign_in'), user_developer_omniauth_authorize_path) %>
+                <%= link_to(t('application.sign_in_with_github'), user_developer_omniauth_authorize_path) %>
               <% else %>
-                <%= link_to(t('application.sign_in'), user_github_omniauth_authorize_path) %>
+                <%= link_to(t('application.sign_in_with_github'), user_github_omniauth_authorize_path) %>
               <% end %>
             <% end %>
         <% end %>

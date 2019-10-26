@@ -3,7 +3,8 @@ window.MathJax = {
     tex2jax: {
         inlineMath: [ ["$","$"], ["\\(","\\)"] ],
         displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
-        processEscapes: true
+        processEscapes: true,
+        ignoreClass: "mathjax_ignore|diff"
     },
     "HTML-CSS": { availableFonts: ["TeX"] }
 };

@@ -21,6 +21,7 @@ de:
         visit_current_translation: "Aktuelle Übersetzung anschauen"
         already_translated: "Dieses Problem wurde bereits übersetzt."
         is_new_translation: "Dieses Problem hat bisher keine Übersetzung."
+        changed_title_html: "Neuer Titel: <code>%{new}</code> statt <code>%{old}</code>"
       accept:
         success_message: "Übersetzung wurde erfolgreich akzeptiert!"
       decline:

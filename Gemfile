@@ -42,6 +42,10 @@ gem 'autoprefixer-rails', '~> 9.6.1'
 
 gem 'bh', '~> 1.3.6'
 
+# Use Diffy for showing translation diffs
+gem 'diffy'
+gem 'diff-lcs'
+
 gem 'will_paginate', '~> 3.1.8'
 gem 'will-paginate-i18n', '~> 0.1.15'
 gem 'will_paginate-bootstrap', '~> 1.0.2'

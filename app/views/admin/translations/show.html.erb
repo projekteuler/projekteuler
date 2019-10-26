@@ -7,11 +7,6 @@
   <h1><%= @translation.title %> <small><%= t 'problems.show.problem_subtitle', id: @translation.problem_id %></small></h1>
 </div>
 
-<% if @translation.problem.is_translated? %>
-  <div class="alert alert-warning" role="alert"><%= t('.already_translated') %> <%= link_to t('.visit_current_translation'), @translation.problem, target: '_blank', class: 'alert-link' %></div>
-<% else %>
-  <div class="alert alert-info" role="alert"><%= t('.is_new_translation') %></div>
-<% end %>
 <% if @translation.pending? %>
   <%= link_to admin_translation_decline_path(@translation), method: :post, class: 'btn btn-default btn-sm pull-right' do %>
     <%= icon :remove %> <%= t '.decline_translation' %>
@@ -26,6 +21,21 @@
         <%= sanitize @translation.content, scrubber: TranslationContentScrubber.new %>
     </div>
 <% end %>
+
+<% if @translation.problem.is_translated? %>
+  <% if @translation.title != @translation.problem.title %>
+    <h3><%= t 'activerecord.attributes.translation.title' %></h3>
+    <p><%= t '.changed_title_html', old: @translation.problem.title, new: @translation.title %></p>
+  <% end %>
+  <h3><%= t 'activerecord.attributes.translation.content' %></h3>
+  <%= raw Diffy::Diff.new(@translation.problem.content, @translation.content, allow_empty_diff: false).to_s(:html) %>
+  <div class="alert alert-warning" role="alert"><%= t('.already_translated') %> <%= link_to t('.visit_current_translation'), @translation.problem, target: '_blank', class: 'alert-link' %></div>
+<% else %>
+  <h2><%= t 'activerecord.attributes.translation.content' %></h2>
+  <%= raw Diffy::Diff.new(@translation.content, @translation.content, allow_empty_diff: false).to_s(:html) %>
+  <div class="alert alert-info" role="alert"><%= t('.is_new_translation') %></div>
+<% end %>
+
 <div class="text-center">
   <%= link_to t('problems.show.view_original_problem'), @translation.problem.original_url, target: '_blank' %>
 </div>

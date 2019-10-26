@@ -6,8 +6,9 @@ de:
     updated_at: Aktualisiert
   application:
     site_title: "Projekt Euler"
-    sign_in: 'Einloggen'
-    sign_out: 'Ausloggen'
+    sign_in_with_github: 'Mit GitHub anmelden'
+    logged_in_as_html: "Angemeldet als <b>%{name}</b>"
+    sign_out: 'Abmelden'
     info: "Info"
     privacy: "Datenschutz"
     legal: "Impressum"

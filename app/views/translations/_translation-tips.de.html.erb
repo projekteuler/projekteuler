@@ -1,5 +1,8 @@
-<%= panel heading: 'Hinweise zur Erstellung von Übersetzungen', context: :info do %>
-  <div class='panel-body'>
+<div class="card">
+  <div class="card-header">
+    Hinweise zur Erstellung von Übersetzungen
+  </div>
+  <div class='card-body'>
     <ul>
       <li>Als Basis für jede Übersetzung dient der HTML-Quelltext von projecteuler.net.
         Dazu gehen Sie auf die entsprechende <%= link_to "Problem-Seite", @problem.original_url, target: '_blank' %>.
@@ -12,4 +15,4 @@
       <li>Die Sie-Form benutzen.</li>
     </ul>
   </div>
-<% end %>
+</div>

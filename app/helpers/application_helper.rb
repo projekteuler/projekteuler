@@ -27,4 +27,12 @@ module ApplicationHelper
       page_title + ' - ' + base_title
     end
   end
+
+  def nav_link_to(body, url)
+    nav_options = { class: current_page?(url) ? 'nav-item active': 'nav-item' }
+    content_tag(:li, nav_options) do
+      link_to body, url, class: 'nav-link'
+    end
+  end
+
 end

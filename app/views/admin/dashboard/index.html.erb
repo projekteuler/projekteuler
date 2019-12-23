@@ -1,6 +1,8 @@
 <% provide(:title, t('.administration')) %>
-<h1><%= t('.administration') %></h1>
-<%= link_to t('.view_translations'), admin_translations_path, class: 'btn btn-default' %>
+<div class="pb-2 mt-4 mb-2 border-bottom">
+  <h1><%= t('.administration') %></h1>
+</div>
+<%= link_to t('.view_translations'), admin_translations_path, class: 'btn btn-primary' %>
 
 <h1><%= t('.update_problem_count') %></h1>
 <%= form_tag '/admin/update_problem_count', method: :post, class: 'form-inline' do %>

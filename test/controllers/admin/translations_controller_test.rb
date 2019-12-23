@@ -7,6 +7,8 @@ class Admin::TranslationsControllerTest < ActionDispatch::IntegrationTest
     login_admin
     @translation = translations(:translation_one)
     @translation_alternative = translations(:translation_two_alternative)
+    @translation_outdated = translations(:translation_two_outdated)
+    @translation_declined = translations(:translation_two_declined)
   end
   test "should get index" do
     get admin_translations_url
@@ -14,8 +16,23 @@ class Admin::TranslationsControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:translations)
   end
 
-  test "should show translation" do
+  test "should show current_translation" do
     get admin_translation_url(translation_id: @translation)
+    assert_response :success
+  end
+
+  test "should show alternative_translation" do
+    get admin_translation_url(translation_id: @translation_alternative)
+    assert_response :success
+  end
+
+  test "should show outdated_translation" do
+    get admin_translation_url(translation_id: @translation_outdated)
+    assert_response :success
+  end
+
+  test "should show declined_translation" do
+    get admin_translation_url(translation_id: @translation_declined)
     assert_response :success
   end
 

@@ -37,18 +37,16 @@ gem 'web-console', '~> 4.0.1', group: :development
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false
 
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'autoprefixer-rails', '~> 9.6.1'
-
-gem 'bh', '~> 1.3.6'
+gem 'bootstrap', '~> 4.4.1'
+gem "bootstrap_form", "~> 4.0"
+gem 'font-awesome-sass', '~> 5.12.0'
 
 # Use Diffy for showing translation diffs
 gem 'diffy'
 gem 'diff-lcs'
 
 gem 'will_paginate', '~> 3.1.8'
-gem 'will-paginate-i18n', '~> 0.1.15'
-gem 'will_paginate-bootstrap', '~> 1.0.2'
+gem 'will_paginate-bootstrap4', '~> 0.2.2'
 
 gem 'devise', '~> 4.7.1'
 gem 'omniauth'

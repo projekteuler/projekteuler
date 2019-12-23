@@ -1,6 +1,6 @@
 <% provide(:title, t('problems.show.problem_subtitle', id: @translation.problem_id)) %>
 
-<div class="page-header">
+<div class="pb-2 mt-4 mb-2">
   <p class="text-muted">
     <%= render 'shared/authors', authors: Array(@translation.author) %>
   </p>
@@ -8,19 +8,23 @@
 </div>
 
 <% if @translation.pending? %>
-  <%= link_to admin_translation_decline_path(@translation), method: :post, class: 'btn btn-default btn-sm pull-right' do %>
-    <%= icon :remove %> <%= t '.decline_translation' %>
-  <% end %>
-  <%= link_to admin_translation_accept_path(@translation), method: :post, class: 'btn btn-default btn-sm pull-right' do %>
-    <%= icon :ok %> <%= t '.accept_translation' %>
-  <% end %>
+  <div class="problem-buttons">
+    <div class="btn-group problem-buttons-inner">
+    <%= link_to admin_translation_decline_path(@translation), method: :post, class: 'btn btn-danger btn-sm' do %>
+      <%= icon('fas', 'times') %> <%= t '.decline_translation' %>
+    <% end %>
+    <%= link_to admin_translation_accept_path(@translation), method: :post, class: 'btn btn-success btn-sm' do %>
+      <%= icon('fas', 'check') %> <%= t '.accept_translation' %>
+    <% end %>
+    </div>
+  </div>
 <% end %>
 
-<%= panel do %>
-    <div class="panel-body problem-content">
+<div class="card mb-3">
+    <div class="card-body problem-content">
         <%= sanitize @translation.content, scrubber: TranslationContentScrubber.new %>
     </div>
-<% end %>
+</div>
 
 <% if @translation.problem.is_translated? %>
   <% if @translation.title != @translation.problem.title %>

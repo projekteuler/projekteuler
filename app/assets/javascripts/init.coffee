@@ -18,6 +18,6 @@ App.init = ->
 $(document).on "turbolinks:load", ->
   App.init()
 
-$(document).on "click", '#translationNav a[href="#preview"]', ->
+$(document).on "click", '#translationTab a[href="#preview"]', ->
   $('#preview .problem-content').html(cm.getValue())
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);

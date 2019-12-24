@@ -18,6 +18,19 @@ translation_two_alternative:
   content: The changed content for the second problem
   status: 0
 
+translation_two_outdated:
+  problem_id: 2
+  title: Second title
+  content: The old content for the second problem
+  status: 2
+
+
+translation_two_declined:
+  problem_id: 2
+  title: Second title
+  content: The content for the second problem with typo
+  status: 3
+
 translation_with_html:
   problem_id: 4
   title: Some title

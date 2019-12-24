@@ -1,12 +1,10 @@
 <div class="jumbotron">
-  <div class="container">
-    <h1>Willkommen auf Projekt Euler!</h1>
-    <p>Diese Seite ist eine Übersetzung der englischen Rätsel-Webseite <a href="https://projecteuler.net/">projecteuler.net</a>.</p>
-    <p>
-      <%= link_to about_info_path, class: 'btn btn-primary btn-lg' do %>
-          Mehr erfahren &raquo;
-      <% end %>
-  </div>
+  <h1 class="display-4">Willkommen auf Projekt Euler!</h1>
+  <p>Diese Seite ist eine Übersetzung der englischen Rätsel-Webseite <a href="https://projecteuler.net/">projecteuler.net</a>.</p>
+  <p class="lead">
+    <%= link_to about_info_path, class: 'btn btn-primary btn-lg' do %>
+        Mehr erfahren &raquo;
+    <% end %>
 </div>
 
 <div class="container">
@@ -16,7 +14,7 @@
       <h2>Ansehen</h2>
       <p>Sehen Sie sich die mathematischen Probleme in deutscher Sprache an.</p>
       <p>
-        <%= link_to problems_path, class: 'btn btn-default' do %>
+        <%= link_to problems_path, class: 'btn btn-primary' do %>
             Zu den Problemen &raquo;
         <% end %>
       </p>
@@ -28,7 +26,7 @@
     <div class="col-md-4">
       <h2>Verbessern</h2>
       <p>Vermissen Sie eine Funktion auf der Webseite, oder ist Ihnen ein Fehler aufgefallen? Dann helfen Sie beim Entwickeln der Webseite in Ruby on Rails!</p>
-      <p><a class="btn btn-default" href="https://github.com/projekteuler/projekteuler" target="_blank" role="button">Projekt Euler auf GitHub &raquo;</a></p>
+      <p><a class="btn btn-primary" href="https://github.com/projekteuler/projekteuler" target="_blank">Projekt Euler auf GitHub &raquo;</a></p>
     </div>
   </div>
 </div>

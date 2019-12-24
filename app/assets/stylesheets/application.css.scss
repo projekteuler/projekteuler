@@ -15,11 +15,13 @@
  *= require_tree .
  */
 
-@import "bootstrap-sprockets";
 @import "bootstrap";
+@import "rails_bootstrap_forms";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .turbolinks-progress-bar {
-  background-color: $brand-primary;
+  background-color: $primary;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -37,21 +39,36 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
-  background-color: $navbar-default-bg;
+  line-height: 40px;
+  background-color: $light;
 }
 
-.container .text-muted {
-  margin: 10px 0;
+/* Custom style for navbar toggler due to CSP problems */
+.navbar-toggler-icon {
+  background-image: none !important;
+}
+
+/* Style for buttons in the corner of problems/translations */
+.problem-buttons {
+  position: relative;
+  display: block;
+}
+
+.problem-buttons .problem-buttons-inner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 
 /* Style for links to previous and next problem */
 .problem-prev {
-  @extend .pull-left;
+  float: left;
   margin: 20px -30px 0;
 }
 
 .problem-next {
-  @extend .pull-right;
+  float: right;
   margin: 20px -30px 0;
 }
 

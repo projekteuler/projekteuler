@@ -1,6 +1,8 @@
 <% provide(:title, Translation.model_name.human(count: 2)) %>
 
-<h1><%= Translation.model_name.human(count: 2) %></h1>
+<div class="pb-2 mt-4 mb-2 border-bottom">
+  <h1><%= Translation.model_name.human(count: 2) %></h1>
+</div>
 
 <%= render 'translation_pagination' %>
 <table class="table table-striped table-bordered">

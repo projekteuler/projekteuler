@@ -1,33 +1,44 @@
-<%= navbar position: :static do %>
-    <%= vertical do %>
-        <%= link_to t('application.site_title'), root_path %>
-    <% end %>
-    <%= horizontal do %>
-        <%= nav class: 'navbar-left' do %>
-            <%= link_to t('application.info'), about_info_path %>
-            <%= link_to Problem.model_name.human(count: 2), problems_path %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <%= link_to t('application.site_title'), root_path, class: 'navbar-brand' %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <%= icon('fas', 'bars') %>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <%= nav_link_to t('application.info'), about_info_path %>
+            <%= nav_link_to Problem.model_name.human(count: 2), problems_path %>
             <% if user_signed_in? and current_user.admin? %>
-                <%= link_to t('admin.dashboard.index.administration'), admin_dashboard_index_path %>
-                <%= link_to admin_translations_path do %>
-                  <%= t('admin.dashboard.index.translations') %> <span class="badge"><%= Translation.pending.count %></span>
+                <%= nav_link_to t('admin.dashboard.index.administration'), admin_dashboard_index_path %>
+                <%= link_to admin_translations_path, class: 'nav-link' do %>
+                  <%= t('admin.dashboard.index.translations') %> <span class="badge badge-secondary"><%= Translation.pending.count %></span>
                 <% end %>
             <% end %>
-        <% end %>
-        <%= nav class: 'navbar-right' do %>
-            <% if user_signed_in? %>
+        </ul>
+        <ul class="navbar-nav">
+          <% if user_signed_in? %>
+            <li class="nav-item">
               <span class="navbar-text"><%= t 'application.logged_in_as_html', name: current_user.name %>
                 <% if current_user.admin? %>
-                  <b><%= icon :star %></b>
+                  <b><%= icon('fas', 'star') %></b>
                 <% end %>
               </span>
-              <%= link_to(t('application.sign_out'), destroy_user_session_path, method: :delete) %>
-            <% else %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('application.sign_out'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+          <% else %>
+            <li class="nav-item">
               <% if Rails.env.development? %>
-                <%= link_to(t('application.sign_in_with_github'), user_developer_omniauth_authorize_path) %>
+                <%= link_to t('application.sign_in_with_github'), user_developer_omniauth_authorize_path, class: 'nav-link' %>
               <% else %>
-                <%= link_to(t('application.sign_in_with_github'), user_github_omniauth_authorize_path) %>
+                <%= link_to t('application.sign_in_with_github'), user_github_omniauth_authorize_path, class: 'nav-link' %>
               <% end %>
-            <% end %>
-        <% end %>
-    <% end %>
-<% end %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+  </div>
+</nav>

@@ -15,11 +15,9 @@
 <body>
 <main role="main">
   <%= render 'layouts/header' %>
-  <div class="container">
+  <div class="container mt-3 mb-3">
     <%= flash_messages %>
-    <div class="row">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </div>
 </main>
 

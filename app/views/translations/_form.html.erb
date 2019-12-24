@@ -1,17 +1,23 @@
-<%= form_for [@problem, @translation], layout: :basic do |f| %>
+<%= bootstrap_form_for [@problem, @translation], layout: :basic do |f| %>
   <%= f.text_field :title %>
-  <%= nav id: 'translationNav' do %>
-    <%= link_to t('.source_code'), '#source', data: {toggle: 'tab'} %>
-    <%= link_to t('.preview'), '#preview', data: {toggle: 'tab'} %>
-  <% end %>
-  <div class="tab-content">
-    <div class="tab-pane active" id="source">
+  <ul class="nav nav-tabs" id="translationTab" role="tablist">
+    <li class="nav-item">
+      <%= link_to t('.source_code'), '#source', data: {toggle: 'tab'}, class:'nav-link active', id:'source-tab', role:'tab', 'aria-controls':'source', 'aria-selected':'true' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t('.preview'), '#preview', data: {toggle: 'tab'}, class:'nav-link', id:'preview-tab', role:'tab', 'aria-controls':'preview', 'aria-selected':'false' %>
+    </li>
+  </ul>
+  <div class="tab-content" id="translationTabContent">
+    <div class="tab-pane show active" id="source" role="tabpanel" aria-labelledby="source-tab">
       <%= f.text_area :content, placeholder: t('.translation_source_explanation') %>
     </div>
-    <%= panel class: 'tab-pane', id: 'preview' do %>
-      <div class="panel-body problem-content">
+    <div class="tab-pane" id="preview" role="tabpanel" aria-labelledby="preview-tab">
+      <div class="card mb-3">
+        <div class="card-body problem-content">
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
   <div class="alert alert-info">
     <%= t '.copyright_warning_html' %>
@@ -19,8 +25,8 @@
       <%= t '.not_logged_in_warning' %>
     <% end %>
   </div>
-  <%= f.submit %>
+  <%= f.primary %>
   <% if user_signed_in? and current_user.admin? %>
-    <%= f.button t('.save_and_accept'), type: :submit, name: "accept", value: true, class: "btn-success" %>
+    <%= f.button t('.save_and_accept'), type: :submit, name: "accept", value: true, class: "btn btn-success" %>
   <% end %>
 <% end %>

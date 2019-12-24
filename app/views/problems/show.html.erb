@@ -1,10 +1,7 @@
 <% provide(:title, t('problems.show.problem_subtitle', id: @problem.id)) %>
 
 <div class="pb-2 mt-4 mb-2">
-  <p class="text-muted">
-    <%= render 'shared/authors', authors: @problem.authors, has_anonymous_author: @problem.has_anonymous_author? %>
-  </p>
-  <h1><%= @problem.title %> <small><%= t '.problem_subtitle', id: @problem.id %></small></h1>
+  <h1><%= @problem.title %></h1>
 </div>
 <% if Problem.exists?(@problem.id-1) %>
   <%= link_to problem_path(@problem.id-1), title: t('problems.show.problem_subtitle', id: @problem.id-1), class: 'problem-prev' do %>
@@ -16,15 +13,21 @@
     <%= icon('fas', 'chevron-right') %>
   <% end %>
 <% end %>
-<div class="problem-buttons">
-  <%= link_to new_problem_translation_path(@problem), class: 'problem-buttons-inner btn btn-primary btn-sm' do %>
-    <%= icon('fas', 'edit') %> <%= t '.improve_translation' %>
-  <% end %>
-</div>
 <div class="card mb-3">
-    <div class="card-body problem-content">
-      <%= sanitize @problem.content, scrubber: TranslationContentScrubber.new %>
-    </div>
+  <div class="card-header">
+    <%= t '.problem_subtitle', id: @problem.id %>
+  </div>
+  <div class="problem-buttons">
+    <%= link_to new_problem_translation_path(@problem), class: 'problem-buttons-inner btn btn-primary btn-sm' do %>
+      <%= icon('fas', 'edit') %> <%= t '.improve_translation' %>
+    <% end %>
+  </div>
+  <div class="card-body problem-content">
+    <%= sanitize @problem.content, scrubber: TranslationContentScrubber.new %>
+  </div>
+  <div class="card-footer text-muted">
+    <%= render 'shared/authors', authors: @problem.authors, has_anonymous_author: @problem.has_anonymous_author? %>
+  </div>
 </div>
 <div class="text-center">
   <%= link_to t('.view_original_problem'), @problem.original_url, target: '_blank' %>

@@ -39,13 +39,16 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
+  line-height: 40px;
   background-color: $light;
 }
 
-.container .text-muted {
-  margin: 10px 0;
+/* Custom style for navbar toggler due to CSP problems */
+.navbar-toggler-icon {
+  background-image: none !important;
 }
 
+/* Style for buttons in the corner of problems/translations */
 .problem-buttons {
   position: relative;
   display: block;

@@ -4,7 +4,7 @@ class TranslatorFlowTest < ActionDispatch::IntegrationTest
   test "can view a problem" do
     get '/problems/1'
     assert_response :success
-    assert_select "h1", "First title Problem 1"
+    assert_select "h1", "First title"
   end
 
   test "can login via github" do

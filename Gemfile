@@ -13,7 +13,7 @@ gem 'bootsnap', require: false
 # Use SCSS for stylesheets
 gem 'sassc-rails', '~> 2.1.2'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '~> 4.1.20'
+gem 'uglifier', '~> 4.2.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 5.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

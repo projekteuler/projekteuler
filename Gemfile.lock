@@ -66,7 +66,7 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
-    bootstrap_form (4.3.0)
+    bootstrap_form (4.4.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     builder (3.2.4)
@@ -79,8 +79,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.5)
-    crass (1.0.5)
+    concurrent-ruby (1.1.6)
+    crass (1.0.6)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -127,7 +127,7 @@ GEM
     multipart-post (2.1.1)
     mysql2 (0.5.3)
     nio4r (2.5.2)
-    nokogiri (1.10.8)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     oauth2 (1.4.3)
       faraday (>= 0.8, < 2.0)
@@ -232,7 +232,7 @@ GEM
     will_paginate (3.3.0)
     will_paginate-bootstrap4 (0.2.2)
       will_paginate (~> 3.0, >= 3.0.0)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
@@ -240,7 +240,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 4.4.1)
-  bootstrap_form (~> 4.0)
+  bootstrap_form (~> 4.4)
   codacy-coverage
   coffee-rails (~> 5.0.0)
   devise (~> 4.7.1)

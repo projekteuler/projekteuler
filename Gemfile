@@ -38,7 +38,7 @@ gem 'web-console', '~> 4.0.1', group: :development
 gem 'codacy-coverage', :require => false
 
 gem 'bootstrap', '~> 4.4.1'
-gem "bootstrap_form", "~> 4.0"
+gem "bootstrap_form", "~> 4.4"
 gem 'font-awesome-sass', '~> 5.12.0'
 
 # Use Diffy for showing translation diffs

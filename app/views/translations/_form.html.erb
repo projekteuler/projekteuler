@@ -1,5 +1,5 @@
 <%= bootstrap_form_for [@problem, @translation], layout: :basic do |f| %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, value: @original_title %>
   <ul class="nav nav-tabs" id="translationTab" role="tablist">
     <li class="nav-item">
       <%= link_to t('.source_code'), '#source', data: {toggle: 'tab'}, class:'nav-link active', id:'source-tab', role:'tab', 'aria-controls':'source', 'aria-selected':'true' %>
@@ -10,7 +10,7 @@
   </ul>
   <div class="tab-content" id="translationTabContent">
     <div class="tab-pane show active" id="source" role="tabpanel" aria-labelledby="source-tab">
-      <%= f.text_area :content, placeholder: t('.translation_source_explanation') %>
+      <%= f.text_area :content, value: @original_problem, placeholder: t('.translation_source_explanation') %>
     </div>
     <div class="tab-pane" id="preview" role="tabpanel" aria-labelledby="preview-tab">
       <div class="card mb-3">

@@ -1,9 +1,15 @@
+require "json"
+
 class TranslationsController < ApplicationController
   before_action :set_problem, only: [:new, :create]
   before_action :set_accept, only: [:create]
 
   # GET /translations/new
   def new
+    file = File.open "app/controllers/problems.json"
+    problem_json = JSON.load file
+    @original_title = problem_json[@problem.id.to_s]["title"]
+    @original_problem = problem_json[@problem.id.to_s]["problem"]
     @translation = @problem.translations.build
     if @problem.is_translated?
       @translation.title = @problem.translation.title

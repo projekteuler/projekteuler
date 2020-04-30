@@ -66,9 +66,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
-    bootstrap_form (4.4.0)
-      actionpack (>= 5.0)
-      activemodel (>= 5.0)
+    bootstrap_form (4.5.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     builder (3.2.4)
     codacy-coverage (2.2.1)
       simplecov
@@ -109,7 +109,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     jwt (2.2.1)
-    loofah (2.4.0)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -215,7 +215,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -240,7 +240,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 4.4.1)
-  bootstrap_form (~> 4.4)
+  bootstrap_form (~> 4.5)
   codacy-coverage
   coffee-rails (~> 5.0.0)
   devise (~> 4.7.1)

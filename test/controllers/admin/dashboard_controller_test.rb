@@ -2,6 +2,7 @@ require 'test_helper'
 
 class Admin::DashboardControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
+  include ActiveJob::TestHelper
 
   setup do
   end
@@ -18,18 +19,14 @@ class Admin::DashboardControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should post new problem count" do
-    login_admin
-    post admin_dashboard_update_problem_count_url(problem_count: 15)
-    assert_redirected_to admin_dashboard_index_url
-    assert_equal 15, Problem.count
-  end
+  test "should update problems" do
+    WebMock.stub_request(:get, "https://projecteuler.net/minimal=problems;csv").to_return(body: "")
 
-  test "should fail incorrect problem count" do
     login_admin
-    post admin_dashboard_update_problem_count_url(problem_count: 3)
+    assert_enqueued_jobs 1, only: PullProblemsJob do
+      post admin_dashboard_pull_problems_url
+    end
     assert_redirected_to admin_dashboard_index_url
-    assert_equal 4, Problem.count
   end
 
 end

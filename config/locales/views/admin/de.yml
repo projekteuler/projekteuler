@@ -5,12 +5,11 @@ de:
         administration: "Administration"
         translations: "Übersetzungen"
         view_translations: "Übersetzungen anschauen"
-        update_problem_count: "Problem-Anzahl aktualisieren"
-        update: "Aktualisieren"
-      update_problem_count:
-        success_message: "Problem-Anzahl wurde erfolgreich aktualisiert!"
-        failure_message: "Problem-Anzahl konnte nicht aktualisiert werden! Grund: %{error}"
-        no_problem_count: "Keine Problem-Anzahl gegeben!"
+        pull_problems: "Probleme aktualisieren"
+        number_of_problems: "Anzahl Probleme"
+        time_since_last_pull: "Zeit seit letzter erfolgreicher Aktualisierung"
+      pull_problems:
+        pull_problems_initiated: "Das Aktualisieren der Probleme wurde angestoßen."
     translations:
       index:
         anonymous: "Anonym"

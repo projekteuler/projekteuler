@@ -28,12 +28,10 @@
           <% if problem.is_translated? %>
             <%= link_to problem.title, problem %>
           <% else %>
-              <i><%= t 'problems.not_yet_translated' %></i>
-              <%= link_to new_problem_translation_path(problem), class: 'btn btn-primary btn-sm' do %>
-                  <%= icon('fas', 'edit') %> <%= t '.suggest_translation' %>
-              <% end %>
+            <%= link_to problem do %>
+              <i><%= problem.original_title %> <%= t 'problems.not_translated_yet' %></i>
+            <% end %>
           <% end %>
-
         </td>
       </tr>
   <% end %>

@@ -1,7 +1,13 @@
 <% provide(:title, t('problems.show.problem_subtitle', id: @problem.id)) %>
 
 <div class="pb-2 mt-4 mb-2">
-  <h1><%= @problem.title %></h1>
+  <h1>
+    <% if @problem.is_translated? %>
+      <%= @problem.title %>
+    <% else %>
+      <i><%= @problem.original_title %> <%= t 'problems.not_translated_yet' %></i>
+    <% end %>
+  </h1>
 </div>
 <% if Problem.exists?(@problem.id-1) %>
   <%= link_to problem_path(@problem.id-1), title: t('problems.show.problem_subtitle', id: @problem.id-1), class: 'problem-prev' do %>
@@ -19,15 +25,26 @@
   </div>
   <div class="problem-buttons">
     <%= link_to new_problem_translation_path(@problem), class: 'problem-buttons-inner btn btn-primary btn-sm' do %>
-      <%= icon('fas', 'edit') %> <%= t '.improve_translation' %>
+      <%= icon('fas', 'edit') %>
+      <% if @problem.is_translated? %>
+        <%= t '.improve_translation' %>
+      <% else %>
+        <%= t '.suggest_translation' %>
+      <% end %>
     <% end %>
   </div>
   <div class="card-body problem-content">
-    <%= sanitize @problem.content, scrubber: TranslationContentScrubber.new %>
+    <% if @problem.is_translated? %>
+      <%= sanitize @problem.content, scrubber: TranslationContentScrubber.new %>
+    <% else %>
+      <%= sanitize @problem.original_content, scrubber: TranslationContentScrubber.new %>
+    <% end %>
   </div>
-  <div class="card-footer text-muted">
-    <%= render 'shared/authors', authors: @problem.authors, has_anonymous_author: @problem.has_anonymous_author? %>
-  </div>
+  <% if @problem.is_translated? %>
+    <div class="card-footer text-muted">
+      <%= render 'shared/authors', authors: @problem.authors, has_anonymous_author: @problem.has_anonymous_author? %>
+    </div>
+  <% end %>
 </div>
 <div class="text-center">
   <%= link_to t('.view_original_problem'), @problem.original_url, target: '_blank' %>

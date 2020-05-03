@@ -1,15 +1,12 @@
-<div class="card">
+<div class="card mb-3">
   <div class="card-header">
     Hinweise zur Erstellung von Übersetzungen
   </div>
   <div class='card-body'>
     <ul>
-      <li>Als Basis für jede Übersetzung dient der HTML-Quelltext von projecteuler.net.
-        Dazu gehen Sie auf die entsprechende <%= link_to "Problem-Seite", @problem.original_url, target: '_blank' %>.
-        Dort öffnen Sie den HTML-Quelltext (z.B. mit <code>Strg+U</code> in Firefox) und kopieren alles zwischen <code>&lt;div class=&quot;problem_content&quot; role=&quot;problem&quot;&gt;</code> und <code>&lt;/div&gt;</code>.
-        Diesen Quelltext fügen Sie auf dieser Seite ein.
-        In Zukunft sollen diese Schritte automatisch passieren.</li>
-      <li>Der HTML-Quelltext sollte im Allgemeinen unverändert bleiben.</li>
+      <li>Als Basis für jede Übersetzung dient der <%= link_to "Text von projecteuler.net", @problem.original_url, target: '_blank' %>.</li>
+      <li>Der Originaltitel und Text im untenstehenden Formular sind zu übersetzen.</li>
+      <li>Der HTML-Quelltext in seiner Struktur sollte im Allgemeinen unverändert bleiben.</li>
       <li>Querverweise zu anderen Problemen sollten in der Form <code>/problem=??</code> erfolgen.</li>
       <li>Wenn Grafiken oder Dateien verwendet werden, sollte die URL <code>https://projecteuler.net/...</code> verwendet werden.</li>
       <li>Die Sie-Form benutzen.</li>

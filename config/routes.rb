@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '', to: 'dashboard#index', as: 'dashboard_index'
-    post '/update_problem_count', to: 'dashboard#update_problem_count', as: 'dashboard_update_problem_count'
+    post '/pull_problems', to: 'dashboard#pull_problems', as: 'dashboard_pull_problems'
     resources :translations, only: [:index] do
       get '', to: 'translations#show', as: ''
       post 'accept', to: 'translations#accept'

@@ -2,11 +2,11 @@
 
 de:
   problems:
-    not_yet_translated: Dieses Problem wurde noch nicht übersetzt.
+    not_translated_yet: "(noch nicht übersetzt)"
     index:
-      suggest_translation: Übersetzung vorschlagen
       translated_count: "Übersetzte Probleme: %{translated} von %{total}"
     show:
       improve_translation: Übersetzung verbessern
       problem_subtitle: Problem %{id}
       view_original_problem: Dieses Problem auf projecteuler.net
+      suggest_translation: Übersetzung vorschlagen

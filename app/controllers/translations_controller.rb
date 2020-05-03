@@ -8,6 +8,9 @@ class TranslationsController < ApplicationController
     if @problem.is_translated?
       @translation.title = @problem.translation.title
       @translation.content = @problem.translation.content
+    else
+      @translation.title = @problem.original_title
+      @translation.content = @problem.original_content
     end
   end
 

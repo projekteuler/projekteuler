@@ -228,7 +228,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.8)
       rack (>= 2.0.6)
-    web-console (4.0.1)
+    web-console (4.0.2)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -272,7 +272,7 @@ DEPENDENCIES
   turbolinks (~> 5.2.1)
   tzinfo-data
   uglifier (~> 4.2.0)
-  web-console (~> 4.0.1)
+  web-console (~> 4.0.2)
   webmock
   will_paginate (~> 3.3.0)
   will_paginate-bootstrap4 (~> 0.2.2)

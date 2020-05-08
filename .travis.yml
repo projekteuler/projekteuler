@@ -2,6 +2,7 @@ dist: trusty
 language: ruby
 cache: bundler
 rvm:
+  - 2.7
   - 2.6
   - 2.5
 bundler_args: --without production

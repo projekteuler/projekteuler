@@ -41,7 +41,7 @@ gem 'codacy-coverage', :require => false
 
 gem 'bootstrap', '~> 4.5.0'
 gem "bootstrap_form", "~> 4.5"
-gem 'font-awesome-sass', '~> 5.12.0'
+gem 'font-awesome-sass', '~> 5.13.0'
 
 # Use Diffy for showing translation diffs
 gem 'diffy'

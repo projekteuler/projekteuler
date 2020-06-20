@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.10.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 1.1.0',          group: :doc
 
-gem 'web-console', '~> 4.0.2', group: :development
+gem 'web-console', '~> 4.0.3', group: :development
 
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false

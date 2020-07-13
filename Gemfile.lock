@@ -132,7 +132,7 @@ GEM
     multipart-post (2.1.1)
     mysql2 (0.5.3)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     oauth2 (1.4.3)
       faraday (>= 0.8, < 2.0)
@@ -228,7 +228,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.8)
       rack (>= 2.0.6)
-    web-console (4.0.3)
+    web-console (4.0.4)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -243,7 +243,7 @@ GEM
     will_paginate (3.3.0)
     will_paginate-bootstrap4 (0.2.2)
       will_paginate (~> 3.0, >= 3.0.0)
-    zeitwerk (2.3.0)
+    zeitwerk (2.3.1)
 
 PLATFORMS
   ruby
@@ -272,7 +272,7 @@ DEPENDENCIES
   turbolinks (~> 5.2.1)
   tzinfo-data
   uglifier (~> 4.2.0)
-  web-console (~> 4.0.3)
+  web-console (~> 4.0.4)
   webmock
   will_paginate (~> 3.3.0)
   will_paginate-bootstrap4 (~> 0.2.2)

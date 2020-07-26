@@ -7,12 +7,11 @@
 Rails.application.config.content_security_policy do |policy|
   policy.default_src :none
   policy.font_src    :self, 'https://cdnjs.cloudflare.com'
-  policy.img_src     :self, 'https://cdnjs.cloudflare.com', 'https://projecteuler.net', 'https://matomo.pfischbeck.de'
+  policy.img_src     :self, 'https://cdnjs.cloudflare.com', 'https://projecteuler.net'
   policy.object_src  :none
-  policy.script_src  :self, 'https://cdnjs.cloudflare.com', 'https://matomo.pfischbeck.de'
+  policy.script_src  :self, 'https://cdnjs.cloudflare.com'
   policy.style_src   :self, :unsafe_inline
   policy.connect_src :self
-  policy.frame_src 'https://matomo.pfischbeck.de'
 
   # Specify URI for violation reports
   # policy.report_uri "/csp-violation-report-endpoint"

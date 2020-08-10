@@ -58,13 +58,13 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (9.7.6)
+    autoprefixer-rails (9.8.6.1)
       execjs
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.7)
       msgpack (~> 1.0)
-    bootstrap (4.5.0)
+    bootstrap (4.5.2)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -81,7 +81,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.6)
+    concurrent-ruby (1.1.7)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.6)
@@ -98,14 +98,14 @@ GEM
     execjs (2.7.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.13.0)
+    ffi (1.13.1)
     font-awesome-sass (5.13.0)
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashdiff (1.0.1)
     hashie (4.1.0)
-    i18n (1.8.3)
+    i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
@@ -243,14 +243,14 @@ GEM
     will_paginate (3.3.0)
     will_paginate-bootstrap4 (0.2.2)
       will_paginate (~> 3.0, >= 3.0.0)
-    zeitwerk (2.3.1)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootsnap
-  bootstrap (~> 4.5.0)
+  bootstrap (~> 4.5.2)
   bootstrap_form (~> 4.5)
   codacy-coverage
   coffee-rails (~> 5.0.0)

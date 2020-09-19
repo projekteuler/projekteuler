@@ -4,6 +4,7 @@ require 'csv'
 class PullProblemsJobTest < ActiveJob::TestCase
   test "should update problem count and titles" do
     csv_string = CSV.generate do |csv|
+      csv << ["ID", "Description", "Published", "Updated", "Solved By"]
       csv << [1, "Title of problem 1", 4.days.ago.to_i, 2.days.ago.to_i, 123]
       csv << [2, "Title of problem 2", 4.days.ago.to_i, 2.days.ago.to_i, 123]
       csv << [3, "Title of problem 3", 4.days.ago.to_i, 2.days.ago.to_i, 123]

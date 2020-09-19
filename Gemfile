@@ -39,7 +39,7 @@ gem 'web-console', '~> 4.0.4', group: :development
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false
 
-gem 'bootstrap', '~> 4.5.0'
+gem 'bootstrap', '~> 4.5.2'
 gem "bootstrap_form", "~> 4.5"
 gem 'font-awesome-sass', '~> 5.13.0'
 

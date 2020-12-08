@@ -1,7 +1,7 @@
 Projekt Euler
 =============
 
-[![Build Status](https://travis-ci.com/projekteuler/projekteuler.svg?branch=master)](https://travis-ci.org/projekteuler/projekteuler)
+![Build Status](https://github.com/projekteuler/projekteuler/workflows/CI/badge.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/68921bff5347435f8fff10c1d6872568)](https://www.codacy.com/app/projekteuler/projekteuler)
 
 This is the Ruby on Rails web-app powering [projekteuler.de](https://projekteuler.de).

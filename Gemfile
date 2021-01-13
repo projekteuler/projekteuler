@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.3.4'
+gem 'rails', '6.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4.1'
 
@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.10.1'
 gem 'sdoc', '~> 2.0.3',          group: :doc
 
 gem 'web-console', '~> 4.1.0', group: :development
+gem 'listen', '~> 3.1.5', group: :development
 
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false

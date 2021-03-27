@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.11.2'
 gem 'sdoc', '~> 2.0.4',          group: :doc
 
 gem 'web-console', '~> 4.1.0', group: :development
-gem 'listen', '~> 3.4.1', group: :development
+gem 'listen', '~> 3.5.0', group: :development
 
 # Use Codacy for coverage
 gem 'codacy-coverage', :require => false

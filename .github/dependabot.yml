@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: omniauth
+    versions:
+    - 2.0.1
+    - 2.0.2
+    - 2.0.3
+  - dependency-name: webmock
+    versions:
+    - 3.11.3
+  - dependency-name: rails
+    versions:
+    - 6.1.2.1
+  - dependency-name: bootsnap
+    versions:
+    - 1.6.0

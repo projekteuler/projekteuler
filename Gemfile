@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.1.3.2'
+# Use Puma as the app server
+gem 'puma', '~> 5.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4.1'
 
@@ -36,9 +38,6 @@ gem 'sdoc', '~> 2.1.0',          group: :doc
 
 gem 'web-console', '~> 4.1.0', group: :development
 gem 'listen', '~> 3.5.1', group: :development
-
-# Use Codacy for coverage
-gem 'codacy-coverage', :require => false
 
 gem 'bootstrap', '~> 4.5.3'
 gem "bootstrap_form", "~> 4.5"

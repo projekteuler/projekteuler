@@ -51,7 +51,7 @@ gem 'diff-lcs'
 gem 'will_paginate', '~> 3.3.0'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 
-gem 'devise', '~> 4.7.3'
+gem 'devise', '~> 4.8.0'
 gem 'omniauth'
 gem 'omniauth-github'
 

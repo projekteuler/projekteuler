@@ -2,7 +2,6 @@ Projekt Euler
 =============
 
 ![Build Status](https://github.com/projekteuler/projekteuler/workflows/CI/badge.svg)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/68921bff5347435f8fff10c1d6872568)](https://www.codacy.com/app/projekteuler/projekteuler)
 
 This is the Ruby on Rails web-app powering [projekteuler.de](https://projekteuler.de).
 It allows visitors to view and suggest German translations of the maths puzzles found on [projecteuler.net](https://projecteuler.net).

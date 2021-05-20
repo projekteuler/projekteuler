@@ -52,6 +52,7 @@ gem 'will_paginate-bootstrap4', '~> 0.2.2'
 
 gem 'devise', '~> 4.8.0'
 gem 'omniauth'
+gem 'omniauth-rails_csrf_protection'
 gem 'omniauth-github'
 
 # Use ActiveModel has_secure_password

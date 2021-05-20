@@ -8,7 +8,7 @@ class TranslatorFlowTest < ActionDispatch::IntegrationTest
   end
 
   test "can login via github" do
-    get '/users/auth/github'
+    post '/users/auth/github'
     assert_response :redirect
     follow_redirect!
     follow_redirect!

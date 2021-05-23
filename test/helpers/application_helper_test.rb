@@ -8,6 +8,6 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "bootstrap flash messages should work" do
     flash[:error] = "Error"
-    assert_equal "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\"><button class=\"close\" data-dismiss=\"alert\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button>Error</div>", flash_messages
+    assert_equal "<div class=\"alert alert-danger alert-dismissible\" role=\"alert\">Error<button class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>", flash_messages
   end
 end

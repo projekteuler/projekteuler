@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="bg-light p-5 rounded">
   <h1 class="display-4">Willkommen auf Projekt Euler!</h1>
   <p>Diese Seite ist eine Übersetzung der englischen Rätsel-Webseite <a href="https://projecteuler.net/">projecteuler.net</a>.</p>
   <p class="lead">
@@ -7,26 +7,27 @@
     <% end %>
 </div>
 
-<div class="container">
-  <!-- Example row of columns -->
-  <div class="row">
-    <div class="col-md-4">
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+  <div class="col d-flex align-items-start">
+    <div>
       <h2>Ansehen</h2>
       <p>Sehen Sie sich die mathematischen Probleme in deutscher Sprache an.</p>
-      <p>
-        <%= link_to problems_path, class: 'btn btn-primary' do %>
-            Zu den Problemen &raquo;
-        <% end %>
-      </p>
+      <%= link_to problems_path, class: 'btn btn-primary' do %>
+          Zu den Problemen &raquo;
+      <% end %>
     </div>
-    <div class="col-md-4">
+  </div>
+  <div class="col d-flex align-items-start">
+    <div>
       <h2>Übersetzen</h2>
       <p>Bisher wurden erst <%= Problem.translated_count %> der <%= Problem.count %> Probleme übersetzt. Helfen Sie mit, Übersetzungen zu erstellen und anzupassen!</p>
     </div>
-    <div class="col-md-4">
+  </div>
+  <div class="col d-flex align-items-start">
+    <div>
       <h2>Verbessern</h2>
       <p>Vermissen Sie eine Funktion auf der Webseite, oder ist Ihnen ein Fehler aufgefallen? Dann helfen Sie beim Entwickeln der Webseite in Ruby on Rails!</p>
-      <p><a class="btn btn-primary" href="https://github.com/projekteuler/projekteuler" target="_blank">Projekt Euler auf GitHub &raquo;</a></p>
+      <a class="btn btn-primary" href="https://github.com/projekteuler/projekteuler" target="_blank">Projekt Euler auf GitHub &raquo;</a>
     </div>
   </div>
 </div>

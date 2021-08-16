@@ -47,7 +47,7 @@ gem 'font-awesome-sass', '~> 5.15.1'
 gem 'diffy'
 gem 'diff-lcs'
 
-gem 'will_paginate', '~> 3.3.0'
+gem 'will_paginate', '~> 3.3.1'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 
 gem 'devise', '~> 4.8.0'

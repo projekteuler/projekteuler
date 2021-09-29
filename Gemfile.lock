@@ -258,7 +258,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    will_paginate (3.3.0)
+    will_paginate (3.3.1)
     will_paginate-bootstrap4 (0.2.2)
       will_paginate (~> 3.0, >= 3.0.0)
     zeitwerk (2.4.2)
@@ -294,7 +294,7 @@ DEPENDENCIES
   uglifier (~> 4.2.0)
   web-console (~> 4.1.0)
   webmock
-  will_paginate (~> 3.3.0)
+  will_paginate (~> 3.3.1)
   will_paginate-bootstrap4 (~> 0.2.2)
 
 BUNDLED WITH

@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.11.2'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 2.2.0',          group: :doc
 
-gem 'web-console', '~> 4.1.0', group: :development
+gem 'web-console', '~> 4.2.0', group: :development
 gem 'listen', '~> 3.7.0', group: :development
 
 gem 'bootstrap', '~> 5.0.1'

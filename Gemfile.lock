@@ -168,7 +168,7 @@ GEM
     public_suffix (4.0.6)
     puma (5.5.2)
       nio4r (~> 2.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -246,7 +246,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (4.1.0)
+    web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
@@ -292,7 +292,7 @@ DEPENDENCIES
   turbolinks (~> 5.2.1)
   tzinfo-data
   uglifier (~> 4.2.0)
-  web-console (~> 4.1.0)
+  web-console (~> 4.2.0)
   webmock
   will_paginate (~> 3.3.1)
   will_paginate-bootstrap4 (~> 0.2.2)

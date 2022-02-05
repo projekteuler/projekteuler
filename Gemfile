@@ -73,3 +73,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Silence net protocol warnings
 # See https://github.com/rails/rails/pull/44175
 gem 'net-http'
+gem 'uri', '0.10.0'

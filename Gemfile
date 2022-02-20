@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.1.4.1'
+gem 'rails', '7.0.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.5'
 # Use sqlite3 as the database for Active Record
@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 5.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
-gem 'rails-i18n', '~> 6.0.0'
+gem 'rails-i18n', '~> 7.0.1'
 
 gem 'rails-controller-testing'
 
@@ -69,3 +69,8 @@ gem 'omniauth-github'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+# Silence net protocol warnings
+# See https://github.com/rails/rails/pull/44175
+gem 'net-http'
+gem 'uri', '0.10.0'

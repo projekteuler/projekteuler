@@ -269,7 +269,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sdoc (2.2.0)
+    sdoc (2.3.2)
       rdoc (>= 5.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -336,7 +336,7 @@ DEPENDENCIES
   rails-controller-testing
   rails-i18n (~> 7.0.1)
   sassc-rails (~> 2.1.2)
-  sdoc (~> 2.2.0)
+  sdoc (~> 2.3.2)
   sqlite3 (~> 1.4.1)
   turbolinks (~> 5.2.1)
   tzinfo-data

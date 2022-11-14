@@ -6,7 +6,7 @@ gem 'rails', '7.0.4'
 # Use Puma as the app server
 gem 'puma', '~> 6.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4.1'
+gem 'sqlite3', '~> 1.5.3'
 
 gem 'mysql2', '~> 0.5.2', group: :production
 
@@ -41,7 +41,7 @@ gem 'listen', '~> 3.7.0', group: :development
 
 gem 'bootstrap', '~> 5.1.3'
 gem "bootstrap_form", "~> 5.0"
-gem 'font-awesome-sass', '~> 5.15.1'
+gem 'font-awesome-sass', '~> 6.2.0'
 
 # Use Diffy for showing translation diffs
 gem 'diffy'

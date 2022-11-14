@@ -238,7 +238,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
-    rails-i18n (7.0.1)
+    rails-i18n (7.0.6)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 8)
     railties (7.0.4)
@@ -307,7 +307,7 @@ GEM
     will_paginate (3.3.1)
     will_paginate-bootstrap4 (0.2.2)
       will_paginate (~> 3.0, >= 3.0.0)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
@@ -332,7 +332,7 @@ DEPENDENCIES
   puma (~> 5.5)
   rails (= 7.0.4)
   rails-controller-testing
-  rails-i18n (~> 7.0.1)
+  rails-i18n (~> 7.0.6)
   sassc-rails (~> 2.1.2)
   sdoc (~> 2.4.0)
   sqlite3 (~> 1.4.1)

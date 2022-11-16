@@ -75,3 +75,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'net-http'
 gem 'uri', '0.10.0'
 gem 'strscan', '3.0.1'
+gem 'stringio', '3.0.1'

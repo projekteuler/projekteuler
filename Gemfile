@@ -74,3 +74,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # See https://github.com/rails/rails/pull/44175
 gem 'net-http'
 gem 'uri', '0.10.0'
+gem 'strscan', '3.0.1'

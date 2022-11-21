@@ -161,7 +161,7 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
+    mysql2 (0.5.4)
     net-http (0.2.0)
       net-protocol
       uri
@@ -325,7 +325,7 @@ DEPENDENCIES
   jbuilder (~> 2.11.3)
   jquery-rails (~> 4.4.0)
   listen (~> 3.7.0)
-  mysql2 (~> 0.5.2)
+  mysql2 (~> 0.5.4)
   net-http
   omniauth
   omniauth-github

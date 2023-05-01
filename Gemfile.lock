@@ -162,9 +162,6 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     mysql2 (0.5.3)
-    net-http (0.2.0)
-      net-protocol
-      uri
     net-imap (0.2.3)
       digest
       net-protocol
@@ -290,7 +287,6 @@ GEM
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    uri (0.10.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -326,7 +322,6 @@ DEPENDENCIES
   jquery-rails (~> 4.5.1)
   listen (~> 3.7.0)
   mysql2 (~> 0.5.2)
-  net-http
   omniauth
   omniauth-github
   omniauth-rails_csrf_protection
@@ -337,16 +332,13 @@ DEPENDENCIES
   sassc-rails (~> 2.1.2)
   sdoc (~> 2.4.0)
   sqlite3 (~> 1.6.2)
-  stringio (= 3.0.5)
-  strscan (= 3.0.1)
   turbolinks (~> 5.2.1)
   tzinfo-data
   uglifier (~> 4.2.0)
-  uri (= 0.10.0)
   web-console (~> 4.2.0)
   webmock
   will_paginate (~> 3.3.1)
   will_paginate-bootstrap4 (~> 0.2.2)
 
 BUNDLED WITH
-   2.3.25
+   2.4.10

@@ -34,7 +34,7 @@ gem 'turbolinks', '~> 5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11.3'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 2.4.0',          group: :doc
+gem 'sdoc', '~> 2.6.1',          group: :doc
 
 gem 'web-console', '~> 4.2.0', group: :development
 gem 'listen', '~> 3.7.0', group: :development

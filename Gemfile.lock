@@ -201,7 +201,7 @@ GEM
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
     popper_js (2.9.3)
-    psych (4.0.6)
+    psych (5.1.0)
       stringio
     public_suffix (4.0.6)
     puma (6.0.0)
@@ -249,7 +249,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rdoc (6.4.0)
+    rdoc (6.5.0)
       psych (>= 4.0.0)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -264,7 +264,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sdoc (2.4.0)
+    sdoc (2.6.1)
       rdoc (>= 5.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -275,7 +275,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.6.2)
       mini_portile2 (~> 2.8.0)
-    stringio (3.0.5)
+    stringio (3.0.6)
     strscan (3.0.1)
     thor (1.2.1)
     tilt (2.0.10)
@@ -330,7 +330,7 @@ DEPENDENCIES
   rails-controller-testing
   rails-i18n (~> 7.0.6)
   sassc-rails (~> 2.1.2)
-  sdoc (~> 2.4.0)
+  sdoc (~> 2.6.1)
   sqlite3 (~> 1.6.2)
   turbolinks (~> 5.2.1)
   tzinfo-data

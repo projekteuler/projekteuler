@@ -40,7 +40,7 @@ gem 'web-console', '~> 4.2.0', group: :development
 gem 'listen', '~> 3.8.0', group: :development
 
 gem 'bootstrap', '~> 5.2.3'
-gem "bootstrap_form", "~> 5.1"
+gem "bootstrap_form", "~> 5.2"
 gem 'font-awesome-sass', '~> 6.4.0'
 
 # Use Diffy for showing translation diffs

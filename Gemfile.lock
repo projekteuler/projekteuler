@@ -78,9 +78,9 @@ GEM
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.6, < 3)
       sassc-rails (>= 2.0.0)
-    bootstrap_form (5.1.0)
-      actionpack (>= 5.2)
-      activemodel (>= 5.2)
+    bootstrap_form (5.2.2)
+      actionpack (>= 6.0)
+      activemodel (>= 6.0)
     builder (3.2.4)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
@@ -294,7 +294,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2.3)
-  bootstrap_form (~> 5.1)
+  bootstrap_form (~> 5.2)
   coffee-rails (~> 5.0.0)
   devise (~> 4.8.0)
   diff-lcs

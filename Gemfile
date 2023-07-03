@@ -28,7 +28,7 @@ gem 'rails-controller-testing'
 gem 'webmock', group: :test
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '~> 4.5.1'
+gem 'jquery-rails', '~> 4.6.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', '~> 5.2.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

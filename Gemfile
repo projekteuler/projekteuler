@@ -41,7 +41,7 @@ gem 'listen', '~> 3.8.0', group: :development
 
 gem 'bootstrap', '~> 5.2.3'
 gem "bootstrap_form", "~> 5.2"
-gem 'font-awesome-sass', '~> 6.4.0'
+gem 'font-awesome-sass', '~> 6.4.2'
 
 # Use Diffy for showing translation diffs
 gem 'diffy'

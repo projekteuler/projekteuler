@@ -39,7 +39,7 @@ gem 'sdoc', '~> 2.6.1',          group: :doc
 gem 'web-console', '~> 4.2.0', group: :development
 gem 'listen', '~> 3.8.0', group: :development
 
-gem 'bootstrap', '~> 5.2.3'
+gem 'bootstrap', '~> 5.3.1'
 gem "bootstrap_form", "~> 5.2"
 gem 'font-awesome-sass', '~> 6.4.0'
 

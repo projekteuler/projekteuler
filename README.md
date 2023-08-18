@@ -11,7 +11,7 @@ It allows visitors to view and suggest German translations of the maths puzzles 
 2.  Make sure [NodeJS >= 18](https://nodejs.org) is installed.
 3.  Navigate inside the repository folder.
 4.  Use bundler to install all required gems.
-        $ bundle install
+    $ bundle install
 5.  Setup the database:
 
         $ bin/rails db:setup
@@ -47,6 +47,8 @@ Do you want to implement this improvement yourself? Follow these steps:
    - `DATABASE_NAME`: The name of the MySQL database
    - `DATABASE_USERNAME`: The username for the MYSQL database
    - `DATABASE_PASSWORD`: The password for the MYSQL database
+   - `DATABASE_HOST`: The host of the MYSQL database
+   - `DATABASE_PORT`: The port of the MYSQL database
    - `GITHUB_CLIENT_ID`: The client ID of your GitHub OAuth App (that you will need to create)
    - `GITHUB_CLIENT_SECRET`: The client secret of the GitHub OAuth App
 6. Install all required gems with `bundle install`.
